@@ -1,4 +1,9 @@
-function Image() {
+interface Props {
+  invert?: boolean;
+}
+
+function Image({ invert }: Props) {
+  console.log(invert);
   {
     /* <Image
                 src="/shoppy-dashboard/screen.png"
@@ -9,7 +14,7 @@ function Image() {
   }
 
   return (
-    <div className="relative aspect-3/2 order-1">
+    <div className={`relative aspect-3/2 ${invert ? "order-1" : null}`}>
       {/* <Image
                 src="/shoppy-dashboard/screen.png"
                 alt="Image of shoppy website"

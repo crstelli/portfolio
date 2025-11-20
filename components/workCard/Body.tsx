@@ -3,6 +3,7 @@ import { Button } from "../Button";
 
 interface Props {
   children: ReactNode;
+  invert?: boolean;
 }
 
 function Body({ children }: Props) {

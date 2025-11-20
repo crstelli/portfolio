@@ -62,6 +62,39 @@ export default function page() {
               </WorkCard.Description>
             </WorkCard.Body>
           </WorkCard>
+
+          <WorkCard invert>
+            <WorkCard.Image />
+            <WorkCard.Body>
+              <WorkCard.Title tag="Full Stack">Shoppy Website</WorkCard.Title>
+              <WorkCard.Description>
+                A modern dashboard for Shoppy Website owners to manage products,
+                orders, and sales metrics efficiently.
+              </WorkCard.Description>
+            </WorkCard.Body>
+          </WorkCard>
+
+          <WorkCard>
+            <WorkCard.Image />
+            <WorkCard.Body>
+              <WorkCard.Title tag="Full Stack">Shoppy Website</WorkCard.Title>
+              <WorkCard.Description>
+                A modern dashboard for Shoppy Website owners to manage products,
+                orders, and sales metrics efficiently.
+              </WorkCard.Description>
+            </WorkCard.Body>
+          </WorkCard>
+
+          <WorkCard invert>
+            <WorkCard.Image />
+            <WorkCard.Body>
+              <WorkCard.Title tag="Full Stack">Shoppy Website</WorkCard.Title>
+              <WorkCard.Description>
+                A modern dashboard for Shoppy Website owners to manage products,
+                orders, and sales metrics efficiently.
+              </WorkCard.Description>
+            </WorkCard.Body>
+          </WorkCard>
         </div>
       </Section>
     </>
