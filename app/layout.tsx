@@ -21,7 +21,7 @@ interface Props {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en" className={`${inter.variable}`}>
-      <body className="min-h-screen w-full justify-items-center grid grid-rows-[auto_1fr] bg-black text-gray-300">
+      <body className="min-h-screen w-full justify-items-center flex flex-col bg-black text-gray-300">
         <Navbar />
         {children}
       </body>
