@@ -1,10 +1,9 @@
-import "@/app/(styles)/globals.css";
+import "@/app/globals.css";
 import type { Metadata } from "next";
 
-import { Inter, Fira_Code } from "next/font/google";
+import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-const firacode = Fira_Code({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
   title: {
@@ -20,8 +19,10 @@ interface Props {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="en" className={`${inter.variable} ${firacode.variable}`}>
-      <body className="min-h-screen w-full bg-grid">{children}</body>
+    <html lang="en" className={`${inter.variable}`}>
+      <body className="min-h-screen w-full bg-black text-gray-300">
+        {children}
+      </body>
     </html>
   );
 }

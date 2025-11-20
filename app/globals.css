@@ -1,9 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-300: #a2f9f3;
-  --color-primary-400: #83f7ef;
-  --color-primary-500: #64f5eb;
-  --color-primary-600: #50c4bc;
-  --color-primary-700: #3c938d;
+  --color-primary: #94d82d;
+}
+
+.bg-grid {
+  background-image: linear-gradient(rgba(31, 31, 31, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 31, 31, 0.3) 1px, transparent 1px);
+  background-size: 20px 20px;
+
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
