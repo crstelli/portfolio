@@ -33,13 +33,7 @@ export default function page() {
               </Button>
             </div>
           </div>
-          {/* <div className="relative">
-          <Image
-            src="/hero.svg"
-            alt="Illustration of a software engineering writing some code."
-            fill
-          />
-        </div> */}
+          <div className="absolute top-40 right-20 w-[400px] h-[400px] bg-primary/20 blur-[120px] rounded-full"></div>
         </Section>
       </main>
       <Section>
@@ -52,8 +46,8 @@ export default function page() {
         </Subtitle>
 
         <div className="flex flex-col relative items-center mt-15 mb-50 gap-20">
-          <div className="absolute top-0 h-full w-1 bg-primary -z-1 scale-105">
-            <div className="size-5 bg-primary rounded-full absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2"></div>
+          <div className="absolute top-0 h-full w-0.5 bg-primary -z-1 scale-105">
+            <div className="size-5 border-2 border-primary rounded-full absolute -bottom-2 translate-y-1/2 left-1/2 -translate-x-1/2"></div>
           </div>
           <WorkCard>
             <WorkCard.Image
