@@ -3,6 +3,7 @@ import { Section } from "@/components/Section";
 import { Subtitle } from "@/components/Subtitle";
 import { Title } from "@/components/Title";
 import { WorkCard } from "@/components/workCard/WorkCard";
+import Image from "next/image";
 import { Download, GitHub } from "react-feather";
 
 export default function page() {
@@ -31,6 +32,11 @@ export default function page() {
               <Button variant="icon">
                 <GitHub size={20} />
               </Button>
+            </div>
+          </div>
+          <div className="flex justify-end">
+            <div className="relative max-w-[320px] w-full aspect-square">
+              <Image src="/hero.svg" alt="Hero image" fill />
             </div>
           </div>
           <div className="absolute top-40 right-20 w-[400px] h-[400px] bg-primary/20 blur-[120px] rounded-full"></div>
