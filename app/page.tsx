@@ -23,7 +23,7 @@ export default function page() {
               esperienza in Next.js e Typescript, sviluppo interfacce veloci,
               accessibili e scalabili utilizzando tecnologie moderne.
             </p>
-            <div className="flex items-stretch gap-4 mt-4">
+            <div className="flex items-stretch gap-4 mt-6">
               <Button className="flex items-center gap-2">
                 <Download />
                 Download my CV
@@ -56,20 +56,31 @@ export default function page() {
             <div className="size-5 bg-primary rounded-full absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2"></div>
           </div>
           <WorkCard>
-            <WorkCard.Image />
+            <WorkCard.Image
+              src="/shoppy-website/preview.png"
+              alt="Preview image of shoppy website app"
+              className="object-cover object-center"
+              fill
+            />
             <WorkCard.Body>
               <WorkCard.Title tag="Full Stack">Shoppy Website</WorkCard.Title>
               <WorkCard.Description>
-                A modern dashboard for Shoppy Website owners to manage products,
-                orders, and sales metrics efficiently.
+                Shoppy is a modern e-commerce platform where users can order a
+                variety of digital and physical products, filter them by price
+                and status, and track their orders.
               </WorkCard.Description>
             </WorkCard.Body>
           </WorkCard>
 
           <WorkCard invert>
-            <WorkCard.Image />
+            <WorkCard.Image
+              src="/shoppy-dashboard/preview.png"
+              alt="Preview image of shoppy dashboard app"
+              className="object-cover object-center"
+              fill
+            />
             <WorkCard.Body>
-              <WorkCard.Title tag="Full Stack">Shoppy Website</WorkCard.Title>
+              <WorkCard.Title tag="Backend">Shoppy Dashboard</WorkCard.Title>
               <WorkCard.Description>
                 A modern dashboard for Shoppy Website owners to manage products,
                 orders, and sales metrics efficiently.
@@ -78,23 +89,35 @@ export default function page() {
           </WorkCard>
 
           <WorkCard>
-            <WorkCard.Image />
+            <WorkCard.Image
+              src="/food-truck/preview.png"
+              alt="Preview image of Food Truck app"
+              className="object-cover object-center"
+              fill
+            />
             <WorkCard.Body>
-              <WorkCard.Title tag="Full Stack">Shoppy Website</WorkCard.Title>
+              <WorkCard.Title tag="Full Stack">Food Truck</WorkCard.Title>
               <WorkCard.Description>
-                A modern dashboard for Shoppy Website owners to manage products,
-                orders, and sales metrics efficiently.
+                Web application for tracking food trucks around the world. You
+                can add new trucks, view their location and details through
+                Google Maps integration, and read other user reviews.
               </WorkCard.Description>
             </WorkCard.Body>
           </WorkCard>
 
           <WorkCard invert>
-            <WorkCard.Image />
+            <WorkCard.Image
+              src="/lumina-tech/preview.png"
+              alt="Preview image of Food Truck app"
+              className="object-cover object-center"
+              fill
+            />
             <WorkCard.Body>
-              <WorkCard.Title tag="Full Stack">Shoppy Website</WorkCard.Title>
+              <WorkCard.Title tag="Frontend">Lumina Tech</WorkCard.Title>
               <WorkCard.Description>
-                A modern dashboard for Shoppy Website owners to manage products,
-                orders, and sales metrics efficiently.
+                Web application for tracking food trucks around the world. You
+                can add new trucks, view their location and details through
+                Google Maps integration, and read other user reviews.
               </WorkCard.Description>
             </WorkCard.Body>
           </WorkCard>
