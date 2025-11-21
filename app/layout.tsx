@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/navbar/Navbar";
 import type { Metadata } from "next";
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: Props) {
       <body className="min-h-screen w-full justify-items-center flex flex-col bg-black text-gray-300">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

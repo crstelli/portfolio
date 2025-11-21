@@ -260,8 +260,9 @@ export default function page() {
           </div>
         </div>
       </Section>
-      <Section className="mt-20 flex flex-col mb-400">
+      <Section className="mt-20 flex flex-col">
         <Title>Contact me</Title>
+        <Subtitle>Descrizione in inglese</Subtitle>
         <div className="self-center hover:scale-120 duration-150 mt-15">
           <button className="glowing-border bg-primary text-black hover:bg-black hover:text-primary px-5 py-2.5 uppercase flex items-center gap-3 cursor-pointer text-xl">
             <Navigation strokeWidth={2.5} />
