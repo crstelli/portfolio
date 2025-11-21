@@ -18,7 +18,7 @@ function Button({
 
   const variants = {
     primary: "text-black bg-primary hover:bg-primary-dark",
-    secondary: "text-primary bg-black",
+    secondary: "text-white border border-neutral-400",
     icon: "aspect-square flex items-center justify-center border border-neutral-800",
   };
 
