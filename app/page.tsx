@@ -132,42 +132,81 @@ export default function page() {
           tecnologie con cui lavoro in modo fluido e che uso per costruire
           progetti scalabili e affidabili.
         </Subtitle>
-        <div className="flex items-center justify-center gap-4 mt-10 mb-100">
+        <div className="grid grid-cols-3 auto-rows-[1fr] justify-center gap-4 mt-10 mb-100">
           <TechStackCard
             image={"/techstack-logos/tailwindcss.svg"}
             label="TailwindCSS"
-            content="My preferred way to style my application"
+            content="Utility-first CSS framework I use to build modern, responsive interfaces efficiently."
           />
-          <TechStackCard image={"/techstack-logos/nextjs.svg"} label="NextJS" />
-          <TechStackCard image={"/techstack-logos/react.svg"} label="React" />
+          <TechStackCard
+            image={"/techstack-logos/nextjs.svg"}
+            label="NextJS"
+            content="My go-to full-stack framework for building fast, scalable web applications."
+          />
+          <TechStackCard
+            image={"/techstack-logos/react.svg"}
+            label="React"
+            content="The core library I rely on to create dynamic, component-driven UIs."
+          />
           <TechStackCard
             image={"/techstack-logos/vscode.svg"}
             label="Visual Studio Code"
+            content="My primary development environment, customized for a fast and focused workflow."
           />
           <TechStackCard
             image={"/techstack-logos/supabase.svg"}
             label="Supabase"
+            content="Backend platform I use for authentication, databases, and real-time features."
           />
           <TechStackCard
             image={"/techstack-logos/typescript.svg"}
             label="TypeScript"
+            content="My preferred way to write safer, predictable JavaScript at scale."
           />
-          <TechStackCard image={"/techstack-logos/git.svg"} label="Git" />
-          <TechStackCard image={"/techstack-logos/github.svg"} label="GitHub" />
-          <TechStackCard image={"/techstack-logos/vercel.svg"} label="Vercel" />
+          <TechStackCard
+            image={"/techstack-logos/git.svg"}
+            label="Git"
+            content="Version control system I use to track changes and collaborate effectively."
+          />
+          <TechStackCard
+            image={"/techstack-logos/github.svg"}
+            label="GitHub"
+            content="The platform where I manage repositories, issues, and project workflows."
+          />
+          <TechStackCard
+            image={"/techstack-logos/vercel.svg"}
+            label="Vercel"
+            content="My deployment platform for fast, reliable builds and previews."
+          />
           <TechStackCard
             image={"/techstack-logos/netlify.svg"}
             label="Netlify"
+            content="A flexible hosting platform I use for static deployments and quick prototypes."
           />
           <TechStackCard
             image={"/techstack-logos/prettier.svg"}
             label="Prettier"
+            content="Formatter I use to enforce consistent code style across all projects."
           />
-          <TechStackCard image={"/techstack-logos/eslint.svg"} label="ESLint" />
-          <TechStackCard image={"/techstack-logos/npm.svg"} label="NPM" />
+          <TechStackCard
+            image={"/techstack-logos/eslint.svg"}
+            label="ESLint"
+            content="Tooling I use to detect issues early and maintain clean, reliable code."
+          />
+          <TechStackCard
+            image={"/techstack-logos/npm.svg"}
+            label="NPM"
+            content="Package manager I rely on to install and manage project dependencies."
+          />
           <TechStackCard
             image={"/techstack-logos/shadcn.svg"}
-            label="ShadCn/UI"
+            label="Shadcn/UI"
+            content="Component system I use to build accessible, customizable interfaces."
+          />
+          <TechStackCard
+            image={"/techstack-logos/nodejs.svg"}
+            label="NodeJS"
+            content="Runtime I use to build server-side logic and run JavaScript outside the browser."
           />
         </div>
       </Section>
