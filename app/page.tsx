@@ -132,10 +132,11 @@ export default function page() {
           tecnologie con cui lavoro in modo fluido e che uso per costruire
           progetti scalabili e affidabili.
         </Subtitle>
-        <div className="flex items-center justify-center gap-4 mt-10">
+        <div className="flex items-center justify-center gap-4 mt-10 mb-100">
           <TechStackCard
             image={"/techstack-logos/tailwindcss.svg"}
             label="TailwindCSS"
+            content="My preferred way to style my application"
           />
           <TechStackCard image={"/techstack-logos/nextjs.svg"} label="NextJS" />
           <TechStackCard image={"/techstack-logos/react.svg"} label="React" />
