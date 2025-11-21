@@ -12,7 +12,9 @@ function Item({ children, customRef }: Props) {
   const ref = customRef || `/${children.toLowerCase()}`;
   const pathname = usePathname();
 
-  const isActive = ref === pathname;
+  const isActive =
+    (pathname === "/" && pathname === ref) ||
+    (pathname !== "/" && ref !== "/" && pathname.includes(ref));
 
   return (
     <li className={`${isActive ? "text-primary" : ""}`}>
