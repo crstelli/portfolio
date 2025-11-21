@@ -1,6 +1,7 @@
 import { Button } from "@/components/Button";
 import { Section } from "@/components/Section";
 import { Subtitle } from "@/components/Subtitle";
+import { TechStackCard } from "@/components/TechStackCard";
 import { Title } from "@/components/Title";
 import { WorkCard } from "@/components/workCard/WorkCard";
 import Image from "next/image";
@@ -132,46 +133,41 @@ export default function page() {
           progetti scalabili e affidabili.
         </Subtitle>
         <div className="flex items-center justify-center gap-4 mt-10">
-          <div className="group overflow-hidden border px-2 py-1 rounded-md flex items-center border-neutral-900 bg-neutral-950">
-            <div className="relative aspect-square w-10">
-              <Image src="techstack-logos/tailwindcss.svg" alt="logo" fill />
-            </div>
-
-            <div
-              className="
-      ml-0 group-hover:ml-2
-      max-w-0 group-hover:max-w-[152px]
-      
-      transition-[max-width,margin-left]
-      duration-[500ms,0ms]
-      ease-in
-      delay-[0ms,300ms]
-      flex overflow-hidden
-    "
-            >
-              <h5
-                className="
-        opacity-0 translate-x-full
-        group-hover:opacity-100 group-hover:translate-x-0
-        duration-300 whitespace-nowrap
-      "
-              >
-                TailwindCSS
-              </h5>
-            </div>
-          </div>
-
-          <div className="group cursor-pointer overflow-hidden border px-2 py-1 rounded-md flex items-center border-neutral-900 bg-neutral-950">
-            <div className="relative aspect-square w-10">
-              <Image src="techstack-logos/nextjs.svg" alt="logo" fill />
-            </div>
-
-            <div className="max-w-0 overflow-hidden group-hover:max-w-[500px] transition-[max-width, margin-left] duration-[500ms, 0ms] delay-[0ms, 500ms] ml-0 group-hover:ml-3 flex">
-              <h5 className="opacity-0 translate-x-full group-hover:opacity-100 group-hover:translate-x-0 duration-500 whitespace-nowrap">
-                NextJS
-              </h5>
-            </div>
-          </div>
+          <TechStackCard
+            image={"/techstack-logos/tailwindcss.svg"}
+            label="TailwindCSS"
+          />
+          <TechStackCard image={"/techstack-logos/nextjs.svg"} label="NextJS" />
+          <TechStackCard image={"/techstack-logos/react.svg"} label="React" />
+          <TechStackCard
+            image={"/techstack-logos/vscode.svg"}
+            label="Visual Studio Code"
+          />
+          <TechStackCard
+            image={"/techstack-logos/supabase.svg"}
+            label="Supabase"
+          />
+          <TechStackCard
+            image={"/techstack-logos/typescript.svg"}
+            label="TypeScript"
+          />
+          <TechStackCard image={"/techstack-logos/git.svg"} label="Git" />
+          <TechStackCard image={"/techstack-logos/github.svg"} label="GitHub" />
+          <TechStackCard image={"/techstack-logos/vercel.svg"} label="Vercel" />
+          <TechStackCard
+            image={"/techstack-logos/netlify.svg"}
+            label="Netlify"
+          />
+          <TechStackCard
+            image={"/techstack-logos/prettier.svg"}
+            label="Prettier"
+          />
+          <TechStackCard image={"/techstack-logos/eslint.svg"} label="ESLint" />
+          <TechStackCard image={"/techstack-logos/npm.svg"} label="NPM" />
+          <TechStackCard
+            image={"/techstack-logos/shadcn.svg"}
+            label="ShadCn/UI"
+          />
         </div>
       </Section>
     </>
