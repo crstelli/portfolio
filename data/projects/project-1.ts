@@ -22,4 +22,12 @@ export const project1: Project = {
   ],
   github: "https://github.com/crstelli/shoppy-website",
   features: ["Responsive Design", "Login with Google", "Order Tracking"],
+  images: [
+    "/shoppy-website/preview.png",
+    "/shoppy-website/image-1.png",
+    "/shoppy-website/image-2.png",
+    "/shoppy-website/image-3.png",
+    "/shoppy-website/image-4.png",
+    "/shoppy-website/image-5.png",
+  ],
 };
