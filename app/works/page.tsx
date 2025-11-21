@@ -5,11 +5,11 @@ import { WorkCard } from "@/components/workCard/WorkCard";
 
 export default function page() {
   return (
-    <main className="max-w-screen h-screen mt-20">
+    <main className="max-w-screen min-h-screen mt-20">
       <Section>
         <Title>Explore My Works</Title>
         <Subtitle>Descrizione in inglese</Subtitle>
-        <div className="mt-15 grid grid-cols-2 justify-items-center">
+        <div className="mt-15 grid grid-cols-2 gap-y-30 justify-items-center">
           <WorkCard>
             <WorkCard.Image
               src="/shoppy-website/preview.png"
@@ -31,6 +31,7 @@ export default function page() {
                 <WorkCard.TechnologyCard>Supabase</WorkCard.TechnologyCard>
                 <WorkCard.TechnologyCard>Vercel</WorkCard.TechnologyCard>
                 <WorkCard.TechnologyCard>Auth.js</WorkCard.TechnologyCard>
+                <WorkCard.PlusCard quantity={2} />
               </WorkCard.TagsContainer>
               <WorkCard.FeaturesContainer>
                 <WorkCard.Feature>Responsive Design</WorkCard.Feature>
@@ -62,6 +63,76 @@ export default function page() {
                 </WorkCard.TechnologyCard>
                 <WorkCard.TechnologyCard>React Router</WorkCard.TechnologyCard>
                 <WorkCard.TechnologyCard>recharts</WorkCard.TechnologyCard>
+                <WorkCard.PlusCard quantity={4} />
+              </WorkCard.TagsContainer>
+              <WorkCard.FeaturesContainer>
+                <WorkCard.Feature>Authentication</WorkCard.Feature>
+                <WorkCard.Feature>Dark and Light mode</WorkCard.Feature>
+                <WorkCard.Feature>Dynamic graphs for data</WorkCard.Feature>
+              </WorkCard.FeaturesContainer>
+            </WorkCard.Body>
+          </WorkCard>
+
+          <WorkCard>
+            <WorkCard.Image
+              src="/lumina-tech/preview.png"
+              alt="Preview image of Lumina Tech website"
+            />
+            <WorkCard.Body>
+              <WorkCard.Header tag="Frontend" year={2025} />
+              <WorkCard.Title>Lumina Tech</WorkCard.Title>
+              <WorkCard.Description>
+                LuminaTech is a fully fictional company project designed to
+                showcase modern web design, clean UI structure, and real-world
+                business presentation. I developed the entire website from
+                scratch, including branding, layout, and component architecture,
+                focusing on a professional and scalable approach.
+              </WorkCard.Description>
+              <WorkCard.TagsContainer>
+                <WorkCard.TechnologyCard>Next.js</WorkCard.TechnologyCard>
+                <WorkCard.TechnologyCard>React</WorkCard.TechnologyCard>
+                <WorkCard.TechnologyCard>TailwindCSS</WorkCard.TechnologyCard>
+                <WorkCard.TechnologyCard>Typescript</WorkCard.TechnologyCard>
+                <WorkCard.TechnologyCard>Vercel</WorkCard.TechnologyCard>
+                <WorkCard.TechnologyCard>
+                  Embla Carousel
+                </WorkCard.TechnologyCard>
+                <WorkCard.PlusCard quantity={1} />
+              </WorkCard.TagsContainer>
+              <WorkCard.FeaturesContainer>
+                <WorkCard.Feature>Responsive Design</WorkCard.Feature>
+                <WorkCard.Feature>Carousel for testimonials</WorkCard.Feature>
+                <WorkCard.Feature>Google Maps integration</WorkCard.Feature>
+              </WorkCard.FeaturesContainer>
+            </WorkCard.Body>
+          </WorkCard>
+
+          <WorkCard>
+            <WorkCard.Image
+              src="/food-truck/preview.png"
+              alt="Preview image of Shoppy dashboard"
+            />
+            <WorkCard.Body>
+              <WorkCard.Header tag="Full Stack" year={2025} />
+              <WorkCard.Title>Food Truck</WorkCard.Title>
+              <WorkCard.Description>
+                Web application for tracking food trucks around the world. You
+                can add new trucks, view their location and details through
+                Google Maps integration, and read other user reviews. The
+                interface is fully responsive and includes a native dark mode
+                for a consistent experience across all devices. Designed to be
+                fast, simple, and easy to use.
+              </WorkCard.Description>
+              <WorkCard.TagsContainer>
+                <WorkCard.TechnologyCard>Next.js</WorkCard.TechnologyCard>
+                <WorkCard.TechnologyCard>React</WorkCard.TechnologyCard>
+                <WorkCard.TechnologyCard>Typescript</WorkCard.TechnologyCard>
+                <WorkCard.TechnologyCard>Supabase</WorkCard.TechnologyCard>
+                <WorkCard.TechnologyCard>TailwindCSS</WorkCard.TechnologyCard>
+                <WorkCard.TechnologyCard>shadcn/ui</WorkCard.TechnologyCard>
+                <WorkCard.TechnologyCard>Leaflet</WorkCard.TechnologyCard>
+                <WorkCard.TechnologyCard>Three.js</WorkCard.TechnologyCard>
+                <WorkCard.PlusCard quantity={4} />
               </WorkCard.TagsContainer>
               <WorkCard.FeaturesContainer>
                 <WorkCard.Feature>Authentication</WorkCard.Feature>

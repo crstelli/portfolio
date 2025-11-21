@@ -8,6 +8,7 @@ import { TagsContainer } from "./TagsContainer";
 import { TechnologyTag } from "./TechnologyTag";
 import { FeaturesContainer } from "./FeaturesContainer";
 import { Feature } from "./Feature";
+import { PlusCard } from "./PlusCard";
 
 interface Props {
   children: ReactNode;
@@ -28,6 +29,7 @@ WorkCard.Title = Title;
 WorkCard.Description = Description;
 WorkCard.TagsContainer = TagsContainer;
 WorkCard.TechnologyCard = TechnologyTag;
+WorkCard.PlusCard = PlusCard;
 WorkCard.FeaturesContainer = FeaturesContainer;
 WorkCard.Feature = Feature;
 

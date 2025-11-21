@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { Button } from "../Button";
-import { GitHub } from "react-feather";
+import { GitHub, Radio } from "react-feather";
 
 interface Props {
   children: ReactNode;
@@ -14,7 +14,14 @@ function Body({ children }: Props) {
         <Button>Progect Page</Button>
         <Button variant="secondary" className="flex items-center gap-2">
           <GitHub size={20} />
-          Code
+          <span>Code</span>
+        </Button>
+        <Button
+          className="ml-auto flex items-center gap-2 text-sm"
+          variant="secondary"
+        >
+          <Radio />
+          <span>Live View</span>
         </Button>
       </div>
     </div>
