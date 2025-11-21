@@ -5,7 +5,7 @@ import { TechStackCard } from "@/components/TechStackCard";
 import { Title } from "@/components/Title";
 import { WorkCard } from "@/components/workCard/WorkCard";
 import Image from "next/image";
-import { Download, GitHub } from "react-feather";
+import { Download, GitHub, User } from "react-feather";
 
 export default function page() {
   return (
@@ -132,7 +132,7 @@ export default function page() {
           tecnologie con cui lavoro in modo fluido e che uso per costruire
           progetti scalabili e affidabili.
         </Subtitle>
-        <div className="grid grid-cols-3 auto-rows-[1fr] justify-center gap-4 mt-10 mb-100">
+        <div className="grid grid-cols-3 auto-rows-[1fr] justify-center gap-4 mt-10">
           <TechStackCard
             image={"/techstack-logos/tailwindcss.svg"}
             label="TailwindCSS"
@@ -208,6 +208,42 @@ export default function page() {
             label="NodeJS"
             content="Runtime I use to build server-side logic and run JavaScript outside the browser."
           />
+        </div>
+      </Section>
+      <Section className="mt-20 mb-100">
+        <Title>About Me</Title>
+        <Subtitle>Descrizione in inglese</Subtitle>
+        <div className="grid grid-cols-2 items-center mt-10">
+          <video
+            src="/animation.webm"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full max-w-[320px] mx-auto"
+          />
+          <div className="mt-20 flex flex-col">
+            <span className="mt-4 flex items-center gap-3">
+              <User className="text-primary" size={30} />
+              <h3 className="text-3xl font-bold text-white">Giuseppe</h3>
+            </span>
+            <p className="mt-4 text-neutral-400">
+              Hi! I&apos;m Giuseppe, a 20-year-old self-taught{" "}
+              <span className="font-bold text-white">Frontend Developer</span>{" "}
+              with a relentless drive to{" "}
+              <span className="font-bold text-white">learn</span> and{" "}
+              <span className="font-bold text-white">grow</span>.
+              <br />
+              <br />I thrive on challenges, excel at problem-solving, and am
+              fully committed to giving my best in every project. I love working
+              in teams, stay focused on delivering results, and approach every
+              task with <span className="font-bold text-white">
+                dedication
+              </span>{" "}
+              and <span className="font-bold text-white">discipline</span>.
+            </p>
+            <Button className="mt-4 self-end">Keep reading &rarr;</Button>
+          </div>
         </div>
       </Section>
     </>

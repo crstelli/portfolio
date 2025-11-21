@@ -16,7 +16,7 @@ function TechStackCard({ label, image, content }: Props) {
         <h5>{label}</h5>
       </div>
       <div className="overflow-hidden col-span-2">
-        <div className="flex flex-col duration-300 -translate-y-full group-hover:translate-y-0 group-hover:opacity-100 opacity-0">
+        <div className="flex flex-col duration-300 mx-2 -translate-y-full group-hover:translate-y-0 group-hover:opacity-100 opacity-0">
           {content}
         </div>
       </div>
