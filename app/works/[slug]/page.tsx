@@ -5,6 +5,16 @@ import { projects } from "@/data/projects";
 
 import { Image } from "@/components/works/Image";
 import { Paragraph } from "@/components/works/Paragraph";
+import {
+  Calendar,
+  Clock,
+  GitHub,
+  HardDrive,
+  Layers,
+  Radio,
+} from "react-feather";
+import { ColorIcon } from "@/components/ColorIcon";
+import { Button } from "@/components/Button";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -31,7 +41,7 @@ export default async function page({ params }: Props) {
           ))}
         </div>
       </Section>
-      <Section className="grid grid-cols-[2fr_1fr] gap-8">
+      <Section className="grid grid-cols-[5fr_3fr] gap-8">
         <div className="flex flex-col items-start gap-10">
           <Paragraph>
             <Paragraph.Title>Project Overview</Paragraph.Title>
@@ -81,7 +91,34 @@ export default async function page({ params }: Props) {
             </Paragraph.Content>
           </Paragraph>
         </div>
-        <div className="bg-neutral-950 border border-neutral-800 rounded-md p-4"></div>
+        <div className="bg-neutral-950 border flex flex-col items-start gap-4 self-start border-neutral-800 rounded-md p-4">
+          <h5 className="self-center text-center text-xl font-bold">
+            {project.name}
+          </h5>
+          <div className="h-px w-full bg-neutral-700"></div>
+          <div className="mt-4 gap-3 grid grid-cols-2 w-full">
+            <ColorIcon
+              icon={Calendar}
+              label="Built in"
+              content="October, 2025"
+            />
+
+            <ColorIcon icon={Layers} label="Stack used" content="Full Stack" />
+            <ColorIcon icon={Clock} label="Worked on for" content="4 days" />
+            <ColorIcon icon={HardDrive} label="Hosted on" content="Vercel" />
+          </div>
+          <Button className="flex items-center gap-2 w-full mt-10 justify-center">
+            <GitHub />
+            View GitHub Repository
+          </Button>
+          <Button
+            variant="secondary"
+            className="flex items-center gap-2 w-full justify-center"
+          >
+            <Radio />
+            Live View
+          </Button>
+        </div>
       </Section>
     </main>
   );
