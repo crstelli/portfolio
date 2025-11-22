@@ -9,6 +9,7 @@ import { TechnologyTag } from "./TechnologyTag";
 import { FeaturesContainer } from "./FeaturesContainer";
 import { Feature } from "./Feature";
 import { PlusCard } from "./PlusCard";
+import { Buttons } from "./Buttons";
 
 interface Props {
   children: ReactNode;
@@ -32,5 +33,6 @@ WorkCard.TechnologyCard = TechnologyTag;
 WorkCard.PlusCard = PlusCard;
 WorkCard.FeaturesContainer = FeaturesContainer;
 WorkCard.Feature = Feature;
+WorkCard.Buttons = Buttons;
 
 export { WorkCard };

@@ -155,7 +155,7 @@ export default function page() {
                 src={`/${p.slug}/preview.png`}
                 alt={`Preview image of ${p.name}`}
               />
-              <WorkCard.Body page={p.slug}>
+              <WorkCard.Body>
                 <WorkCard.Header tag={p.stack} year={p.date.year} />
                 <WorkCard.Title>{p.name}</WorkCard.Title>
                 <WorkCard.Description>{p.description}</WorkCard.Description>
@@ -184,6 +184,11 @@ export default function page() {
                     <WorkCard.Feature key={f}>{f}</WorkCard.Feature>
                   ))}
                 </WorkCard.FeaturesContainer>
+                <WorkCard.Buttons
+                  page={p.slug}
+                  github={p.github}
+                  live={p.live_view}
+                />
               </WorkCard.Body>
             </WorkCard>
           ))}
