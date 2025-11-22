@@ -39,5 +39,5 @@ export const project3: Project = {
   challenges: "challenges",
   key_features: [{ title: "title1", content: "content" }],
   future_improvements: [{ title: "title2", content: "content" }],
-  lessons: [{ title: "title3", content: "content" }],
+  lessons: "",
 };

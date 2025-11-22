@@ -71,7 +71,7 @@ export default async function page({ params }: Props) {
           <Paragraph>
             <Paragraph.Title>Future Improvements</Paragraph.Title>
             <Paragraph.Content>
-              {project.key_features.map((ft) => (
+              {project.future_improvements.map((ft) => (
                 <div key={ft.title}>
                   <div className="font-bold">{ft.title}</div>
                   <div>{ft.content}</div>
@@ -81,15 +81,8 @@ export default async function page({ params }: Props) {
           </Paragraph>
 
           <Paragraph>
-            <Paragraph.Title>Lessons Learned</Paragraph.Title>
-            <Paragraph.Content>
-              {project.key_features.map((ft) => (
-                <div key={ft.title}>
-                  <div className="font-bold">{ft.title}</div>
-                  <div>{ft.content}</div>
-                </div>
-              ))}
-            </Paragraph.Content>
+            <Paragraph.Title>Lessons Learned & Considerations</Paragraph.Title>
+            <Paragraph.Content>{project.lessons}</Paragraph.Content>
           </Paragraph>
         </div>
         <div className="bg-neutral-950 border flex flex-col items-start gap-4 self-start border-neutral-800 rounded-md p-4">

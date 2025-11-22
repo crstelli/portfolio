@@ -29,8 +29,5 @@ export interface Project {
     content: string;
   }[];
 
-  lessons: {
-    title: string;
-    content: string;
-  }[];
+  lessons: string;
 }
