@@ -8,7 +8,12 @@ export default function page() {
     <main className="max-w-screen min-h-screen mt-20">
       <Section>
         <Title>Explore My Works</Title>
-        <Subtitle>Descrizione in inglese</Subtitle>
+        <Subtitle>
+          A selection of projects that reflects my approach to clean design,
+          efficient development, and practical problem-solving. Each work
+          demonstrates how I turn ideas into functional, purposeful digital
+          experiences.
+        </Subtitle>
         <div className="mt-15 grid grid-cols-2 gap-y-30 justify-items-center">
           <WorkCard>
             <WorkCard.Image
