@@ -3,24 +3,90 @@ import type { Project } from "./type";
 export const project4: Project = {
   slug: "food-truck",
   stack: "Full Stack",
-  date: { year: 2025, month: "October" },
-  worked_for: "4 days",
+  date: { year: 2025, month: "November" },
+  worked_for: "7 days",
   hosted_on: "Vercel",
-  name: "Shoppy Website",
+  name: "Food Truck",
   description:
-    "Shoppy is a modern e-commerce platform where users can order a variety of digital and physical products, filter them by price and status, and track their orders.",
+    "A modern, responsive web platform designed for a fictional food truck brand, highlighting vibrant branding, intuitive navigation, and a smooth user experience.",
   technologies: [
-    "Next.js",
-    "React",
-    "TailwindCSS",
-    "Typescript",
-    "Supabase",
-    "Vercel",
-    "Auth.js",
-    "date-fns",
-    "lucide-react",
-    "react-hot-toast",
-    "react-range",
+    {
+      name: "Next.js",
+      icon: "/techstack-logos/nextjs.svg",
+      description: "desc",
+    },
+
+    {
+      name: "React",
+      icon: "/techstack-logos/react.svg",
+      description: "desc",
+    },
+
+    {
+      name: "Supabase",
+      icon: "/techstack-logos/supabase.svg",
+      description: "desc",
+    },
+
+    {
+      name: "TailwindCSS",
+      icon: "/techstack-logos/tailwindcss.svg",
+      description: "desc",
+    },
+
+    {
+      name: "Typescript",
+      icon: "/techstack-logos/typescript.svg",
+      description: "desc",
+    },
+
+    {
+      name: "Vercel",
+      icon: "/techstack-logos/vercel.svg",
+      description: "desc",
+    },
+
+    {
+      name: "Shadcn/ui",
+      icon: "/techstack-logos/shadcn.svg",
+      description: "desc",
+    },
+
+    {
+      name: "lucide-react",
+      icon: "",
+      description: "desc",
+    },
+
+    {
+      name: "react-hot-toasts",
+      icon: "",
+      description: "desc",
+    },
+
+    {
+      name: "react-hook-form",
+      icon: "",
+      description: "desc",
+    },
+
+    {
+      name: "Leaflet",
+      icon: "",
+      description: "desc",
+    },
+
+    {
+      name: "React Leaflet",
+      icon: "",
+      description: "desc",
+    },
+
+    {
+      name: "Three.js",
+      icon: "",
+      description: "desc",
+    },
   ],
   features: ["Responsive Design", "Login with Google", "Order Tracking"],
   github: "https://github.com/crstelli/food-truck",

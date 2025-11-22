@@ -1,0 +1,73 @@
+# Overview
+
+FoodTruck is a full-featured **map-based application** designed to track fast food trucks around the world. Users can browse truck locations, read reviews, add new trucks, search for trucks, and navigate directly via Google Maps links.
+
+The app features a landing page with a hero section and CTA, an about page with a modern Z-pattern layout, a dark mode toggle, and an interactive map interface.
+
+The project was built with **React**, **Next.js**, **TypeScript**, **TailwindCSS**, **Supabase**, and incorporates libraries like **Leaflet**, **React Leaflet**, **Three.js**, **react-hook-form**, **lucide-react**, **react-hot-toast**, and **shadcn/ui**.
+
+## Technical Decisions
+
+- **React + Next.js**: Provides a modular, component-based architecture with optimized page routing.
+
+- **TailwindCSS**: Used for fast, responsive styling and UI consistency.
+
+- **Supabase**: Handles backend data storage, user authentication, and reviews.
+
+- **Leaflet & React Leaflet**: Powers the interactive map interface with markers, popups, and layers.
+
+- **Three.js**: Implements a 3D model of trucks in the info sidebar for a more engaging experience.
+
+- **Forms and Feedback**: react-hook-form for forms and react-hot-toast for notifications.
+
+- **Icons & UI Components**: lucide-react and shadcn/ui for consistent, modern visuals.
+
+- **Dark/Light Theme Layers**: Separate map layers enhance user experience for theme switching.
+
+## Challenges
+
+One key challenge was **structuring a full-featured map-based application** with multiple interactive components, including markers, popups, a sidebar, bookmarks, search, and forms, while keeping navigation intuitive and performant.
+
+Implementing **dynamic interactions with markers and popups** required careful state management and manual handling of events, as well as syncing sidebar content with the map. Ensuring smooth user experience across different components presented additional complexity.
+
+**Working with Leaflet was particularly challenging**, as it is not integrated with TailwindCSS. I had to manually customize styles by selecting classes, handle popup events entirely by hand, and implement **two separate map layers for dark and light mode** to reinforce the UX across themes. This required precise attention to detail and strengthened my ability to solve complex frontend integration problems.
+
+Designing interactive features like bookmarks, search, and adding new trucks taught me to **optimize UX while managing multiple layers of state and events**, making this project a very rewarding challenge.
+
+## Key Features
+
+1. **Landing Page & Hero Section**: Includes illustrations, CTA, and introduction to the app.
+
+2. **About Page**: Explains the app with Z-pattern hero sections, images, and text.
+
+3. **Dark Mode Toggle**: Switch between light and dark themes seamlessly.
+
+4. **Interactive Map**: Centered on Naples, featuring markers for trucks, popups with truck info, and navigation links to Google Maps.
+
+5. **Sidebar Functionality**: Searchbar for finding trucks, bookmarks for saving favorites, and dynamic forms for adding new trucks.
+
+6. **Truck Information Panel**: Displays truck details, affordability, rating, creation date, reviews, bookmarks, and 3D interactive model with Three.js.
+
+7. **Form & Search Integration**: Users can add new trucks with name and affordability level, and search existing trucks with filters.
+
+8. **Settings Page**: Customize app theme (light, dark, or system).
+
+## Future Improvements
+
+- _Dynamic user location_: Center the map based on the user’s real-time position.
+
+- _Add reviews_: Allow users to submit reviews for trucks.
+
+- _Enhanced filtering_: Add filters by affordability, rating, or category.
+
+- _Push notifications_: Alert users about new trucks or updates in nearby areas.
+
+- _Analytics & statistics_: Show popular trucks, top-rated locations, or trends over time.
+
+## Lessons & Final Considerations
+
+Building FoodTruck strengthened my ability to **develop interactive map-based applications** with complex UI interactions. Working with **Leaflet and React Leaflet** taught me how to handle events manually and integrate maps with modern frontend frameworks.
+
+Implementing separate dark/light layers reinforced the importance of **theme-aware UX design**, while creating dynamic popups, sidebar content, and search/bookmark functionality enhanced my **state management and event handling skills**.
+
+Integrating a 3D model with Three.js added an extra layer of interactivity, demonstrating how creative UI elements can enrich the user experience. This project provided hands-on experience in **front-end architecture, complex state**
