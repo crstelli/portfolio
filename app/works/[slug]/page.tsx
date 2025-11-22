@@ -44,7 +44,7 @@ export default async function page({ params }: Props) {
         </div>
       </Section>
       <Section className="grid grid-cols-[5fr_3fr] gap-8">
-        <div className="flex flex-col items-start gap-10">
+        <div>
           <Content />
           {/* <Paragraph>
             <Paragraph.Title>Project Overview</Paragraph.Title>
