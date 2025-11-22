@@ -9,7 +9,11 @@ export interface Project {
   hosted_on: "Vercel" | "Netlify" | "Custom";
   name: string;
   description: string;
-  technologies: string[];
+  technologies: {
+    icon: string;
+    name: string;
+    description: string;
+  }[];
   features: string[];
   github: string;
   live_view: string;

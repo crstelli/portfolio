@@ -15,6 +15,7 @@ import {
 import { ColorIcon } from "@/components/ColorIcon";
 import { Button } from "@/components/Button";
 import Link from "next/link";
+import { TechStackCard } from "@/components/TechStackCard";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -43,49 +44,9 @@ export default async function page({ params }: Props) {
           ))}
         </div>
       </Section>
-      <Section className="grid grid-cols-[5fr_3fr] gap-8">
-        <div>
+      <Section className="grid grid-cols-[5fr_3fr] grid-rows-[auto_auto_1fr] gap-8">
+        <div className="row-span-3">
           <Content />
-          {/* <Paragraph>
-            <Paragraph.Title>Project Overview</Paragraph.Title>
-            <Paragraph.Content>{project.overview}</Paragraph.Content>
-          </Paragraph>
-          <Paragraph>
-            <Paragraph.Title>Technical Decisions</Paragraph.Title>
-            <Paragraph.Content>{project.technical_decisions}</Paragraph.Content>
-          </Paragraph>
-          <Paragraph>
-            <Paragraph.Title>Challenges</Paragraph.Title>
-            <Paragraph.Content>{project.challenges}</Paragraph.Content>
-          </Paragraph>
-
-          <Paragraph>
-            <Paragraph.Title>Key Features</Paragraph.Title>
-            <Paragraph.Content>
-              {project.key_features.map((ft) => (
-                <div key={ft.title}>
-                  <div className="font-bold">{ft.title}</div>
-                  <div>{ft.content}</div>
-                </div>
-              ))}
-            </Paragraph.Content>
-          </Paragraph>
-          <Paragraph>
-            <Paragraph.Title>Future Improvements</Paragraph.Title>
-            <Paragraph.Content>
-              {project.future_improvements.map((ft) => (
-                <div key={ft.title}>
-                  <div className="font-bold">{ft.title}</div>
-                  <div>{ft.content}</div>
-                </div>
-              ))}
-            </Paragraph.Content>
-          </Paragraph>
-
-          <Paragraph>
-            <Paragraph.Title>Lessons Learned & Considerations</Paragraph.Title>
-            <Paragraph.Content>{project.lessons}</Paragraph.Content>
-          </Paragraph> */}
         </div>
         <div className="bg-neutral-950 border flex flex-col items-start gap-4 self-start border-neutral-800 rounded-md p-4">
           <h5 className="self-center text-center text-xl font-bold">
@@ -130,6 +91,18 @@ export default async function page({ params }: Props) {
               Live View
             </Button>
           </Link>
+        </div>
+
+        <div className="bg-neutral-950 border flex flex-col gap-4 self-start border-neutral-800 rounded-md p-4">
+          <h5 className="text-xl font-bold">Tech Stack</h5>
+          {project.technologies.map((tech) => (
+            <TechStackCard
+              key={tech.name}
+              image={tech.icon}
+              label={tech.name}
+              content={tech.description}
+            />
+          ))}
         </div>
       </Section>
     </main>

@@ -8,10 +8,14 @@ interface Props {
 
 function TechStackCard({ label, image, content }: Props) {
   return (
-    <div className="group relative overflow-hidden border-neutral-900 hover:scale-105 border p-2 rounded-md grid grid-cols-[auto_1fr] items-center bg-neutral-950">
+    <div className="group min-h-[50px] relative overflow-hidden border-neutral-900 hover:scale-105 border p-2 rounded-md grid grid-cols-[auto_1fr] items-center bg-neutral-950">
       <div className="left-4 flex items-center gap-4 absolute group-hover:-translate-y-[200%] duration-300 group-hover:opacity-0">
         <div className="relative aspect-square w-9">
-          <Image src={image} alt={`Logo of ${label}`} fill />
+          <Image
+            src={image || "/techstack-logos/placeholder.svg"}
+            alt={`Logo of ${label}`}
+            fill
+          />
         </div>
         <h5>{label}</h5>
       </div>

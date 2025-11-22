@@ -10,17 +10,70 @@ export const project1: Project = {
   description:
     "Shoppy is a modern e-commerce platform where users can order a variety of digital and physical products, filter them by price and status, and track their orders.",
   technologies: [
-    "Next.js",
-    "React",
-    "TailwindCSS",
-    "Typescript",
-    "Supabase",
-    "Vercel",
-    "Auth.js",
-    "date-fns",
-    "lucide-react",
-    "react-hot-toast",
-    "react-range",
+    {
+      name: "Next.js",
+      icon: "/techstack-logos/nextjs.svg",
+      description: "desc",
+    },
+
+    {
+      name: "React",
+      icon: "/techstack-logos/react.svg",
+      description: "desc",
+    },
+
+    {
+      name: "TailwindCSS",
+      icon: "/techstack-logos/tailwindcss.svg",
+      description: "desc",
+    },
+
+    {
+      name: "Typescript",
+      icon: "/techstack-logos/typescript.svg",
+      description: "desc",
+    },
+
+    {
+      name: "Vercel",
+      icon: "/techstack-logos/vercel.svg",
+      description: "desc",
+    },
+
+    {
+      name: "Auth.js",
+      icon: "",
+      description: "desc",
+    },
+
+    {
+      name: "date-fns",
+      icon: "",
+      description: "desc",
+    },
+
+    {
+      name: "lucide-react",
+      icon: "",
+      description: "desc",
+    },
+
+    {
+      name: "react-hot-toasts",
+      icon: "",
+      description: "desc",
+    },
+
+    {
+      name: "react-range",
+      icon: "",
+      description: "desc",
+    },
+    // "Auth.js",
+    // "date-fns",
+    // "lucide-react",
+    // "react-hot-toast",
+    // "react-range",
   ],
   features: ["Responsive Design", "Login with Google", "Order Tracking"],
   github: "https://github.com/crstelli/shoppy-website",
