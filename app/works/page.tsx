@@ -3,6 +3,9 @@ import { Subtitle } from "@/components/Subtitle";
 import { Title } from "@/components/Title";
 import { WorkCard } from "@/components/workCard/WorkCard";
 
+import { projects } from "@/data/projects";
+import { TECH_TAG_QUANTITY_PER_WORK } from "@/lib/constants";
+
 export default function page() {
   return (
     <main className="max-w-screen min-h-screen mt-20">
@@ -15,7 +18,7 @@ export default function page() {
           experiences.
         </Subtitle>
         <div className="mt-15 grid grid-cols-2 gap-y-30 justify-items-center">
-          <WorkCard>
+          {/* <WorkCard>
             <WorkCard.Image
               src="/shoppy-website/preview.png"
               alt="Preview image of shoppy website"
@@ -145,7 +148,45 @@ export default function page() {
                 <WorkCard.Feature>Dynamic graphs for data</WorkCard.Feature>
               </WorkCard.FeaturesContainer>
             </WorkCard.Body>
-          </WorkCard>
+          </WorkCard> */}
+          {projects.map((p) => (
+            <WorkCard key={p.id}>
+              <WorkCard.Image
+                src={`/${p.slug}/preview.png`}
+                alt={`Preview image of ${p.name}`}
+              />
+              <WorkCard.Body page={p.slug}>
+                <WorkCard.Header tag={p.stack} year={p.date.year} />
+                <WorkCard.Title>{p.name}</WorkCard.Title>
+                <WorkCard.Description>{p.description}</WorkCard.Description>
+                <WorkCard.TagsContainer>
+                  {p.technologies.map((tech, i) => {
+                    const othersCount =
+                      p.technologies.length - TECH_TAG_QUANTITY_PER_WORK;
+                    if (i < TECH_TAG_QUANTITY_PER_WORK)
+                      return (
+                        <WorkCard.TechnologyCard key={tech.name}>
+                          {tech.name}
+                        </WorkCard.TechnologyCard>
+                      );
+
+                    if (i === p.technologies.length - 1)
+                      return (
+                        <WorkCard.PlusCard
+                          key={"others"}
+                          quantity={othersCount}
+                        />
+                      );
+                  })}
+                </WorkCard.TagsContainer>
+                <WorkCard.FeaturesContainer>
+                  {p.features.map((f) => (
+                    <WorkCard.Feature key={f}>{f}</WorkCard.Feature>
+                  ))}
+                </WorkCard.FeaturesContainer>
+              </WorkCard.Body>
+            </WorkCard>
+          ))}
         </div>
       </Section>
     </main>

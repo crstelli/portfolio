@@ -1,0 +1,1 @@
+export const TECH_TAG_QUANTITY_PER_WORK = 6;

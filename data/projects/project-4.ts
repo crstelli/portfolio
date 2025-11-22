@@ -1,6 +1,7 @@
 import type { Project } from "./type";
 
 export const project4: Project = {
+  id: 4,
   slug: "food-truck",
   stack: "Full Stack",
   date: { year: 2025, month: "November" },
@@ -99,11 +100,4 @@ export const project4: Project = {
     "/food-truck/image-4.png",
     "/food-truck/image-5.png",
   ],
-
-  overview: "overview",
-  technical_decisions: "technical_decisions",
-  challenges: "challenges",
-  key_features: [{ title: "title1", content: "content" }],
-  future_improvements: [{ title: "title2", content: "content" }],
-  lessons: "",
 };

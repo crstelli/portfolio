@@ -1,6 +1,7 @@
 import type { Project } from "./type";
 
 export const project2: Project = {
+  id: 2,
   slug: "shoppy-dashboard",
   stack: "Full Stack",
   date: { year: 2025, month: "October" },
@@ -77,11 +78,4 @@ export const project2: Project = {
     "/shoppy-dashboard/image-4.png",
     "/shoppy-dashboard/image-5.png",
   ],
-
-  overview: "overview",
-  technical_decisions: "technical_decisions",
-  challenges: "challenges",
-  key_features: [{ title: "title1", content: "content" }],
-  future_improvements: [{ title: "title2", content: "content" }],
-  lessons: "",
 };
