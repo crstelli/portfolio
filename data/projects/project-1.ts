@@ -23,6 +23,12 @@ export const project1: Project = {
     },
 
     {
+      name: "Supabase",
+      icon: "/techstack-logos/supabase.svg",
+      description: "desc",
+    },
+
+    {
       name: "TailwindCSS",
       icon: "/techstack-logos/tailwindcss.svg",
       description: "desc",

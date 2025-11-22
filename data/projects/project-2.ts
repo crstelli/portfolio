@@ -10,17 +10,61 @@ export const project2: Project = {
   description:
     "Shoppy Dashboard is a modern admin dashboard for Shoppy Website owners to manage products, orders, and sales metrics efficiently.",
   technologies: [
-    "React",
-    "Vite",
-    "TailwindCSS",
-    "Supabase",
-    "Tanstack Query",
-    "React Router",
-    "Netlify",
-    "date-fns",
-    "lucide-react",
-    "react-hot-toast",
-    "recharts",
+    {
+      name: "React",
+      icon: "/techstack-logos/react.svg",
+      description: "desc",
+    },
+    {
+      name: "Vite",
+      icon: "/techstack-logos/vite.svg",
+      description: "desc",
+    },
+    {
+      name: "TailwindCSS",
+      icon: "/techstack-logos/tailwindcss.svg",
+      description: "desc",
+    },
+    {
+      name: "Supabase",
+      icon: "/techstack-logos/supabase.svg",
+      description: "desc",
+    },
+    {
+      name: "Tanstack Query",
+      icon: "",
+      description: "desc",
+    },
+    {
+      name: "React Router",
+      icon: "",
+      description: "desc",
+    },
+    {
+      name: "Netlify",
+      icon: "/techstack-logos/netlify.svg",
+      description: "desc",
+    },
+    {
+      name: "date-fns",
+      icon: "",
+      description: "desc",
+    },
+    {
+      name: "lucide-react",
+      icon: "",
+      description: "desc",
+    },
+    {
+      name: "react-hot-toast",
+      icon: "",
+      description: "desc",
+    },
+    {
+      name: "recharts",
+      icon: "",
+      description: "desc",
+    },
   ],
   features: ["Responsive Design", "Login with Google", "Order Tracking"],
   github: "https://github.com/crstelli/shoppy-dashboard",
