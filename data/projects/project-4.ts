@@ -89,7 +89,7 @@ export const project4: Project = {
       description: "desc",
     },
   ],
-  features: ["Responsive Design", "Login with Google", "Order Tracking"],
+  features: ["Responsive Design", "Map Integration", "3D Model"],
   github: "https://github.com/crstelli/food-truck",
   live_view: "https://crstelli-foodtruck.vercel.app/",
   images: [

@@ -53,7 +53,7 @@ export const project3: Project = {
       description: "desc",
     },
   ],
-  features: ["Responsive Design", "Login with Google", "Order Tracking"],
+  features: ["Responsive Design", "Modern Carousel", "Google Maps Integration"],
   github: "https://github.com/crstelli/lumina-tech",
   live_view: "https://lumina-tech.netlify.app/",
   images: [

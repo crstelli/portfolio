@@ -67,7 +67,7 @@ export const project2: Project = {
       description: "desc",
     },
   ],
-  features: ["Responsive Design", "Login with Google", "Order Tracking"],
+  features: ["Dark Mode", "Graphs for analytics", "Filtering and sorting"],
   github: "https://github.com/crstelli/shoppy-dashboard",
   live_view: "https://db-shoppy.netlify.app/",
   images: [
