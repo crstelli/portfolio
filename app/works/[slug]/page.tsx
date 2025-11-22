@@ -4,6 +4,7 @@ import { Title } from "@/components/Title";
 import { projects } from "@/data/projects";
 
 import { Image } from "@/components/works/Image";
+import { Paragraph } from "@/components/works/Paragraph";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -31,56 +32,54 @@ export default async function page({ params }: Props) {
         </div>
       </Section>
       <Section className="grid grid-cols-[2fr_1fr] gap-8">
-        <div className="flex flex-col items-start">
-          <h3 className="text-xl font-medium ml-3 text-white">
-            Project Overview
-          </h3>
-          <p className="text-neutral-400">{project.overview}</p>
-          <h3 className="text-xl font-medium ml-3 mt-8 text-white">
-            Technical Decisions
-          </h3>
-          <p className="text-neutral-400">{project.technical_decisions}</p>
+        <div className="flex flex-col items-start gap-10">
+          <Paragraph>
+            <Paragraph.Title>Project Overview</Paragraph.Title>
+            <Paragraph.Content>{project.overview}</Paragraph.Content>
+          </Paragraph>
+          <Paragraph>
+            <Paragraph.Title>Technical Decisions</Paragraph.Title>
+            <Paragraph.Content>{project.technical_decisions}</Paragraph.Content>
+          </Paragraph>
+          <Paragraph>
+            <Paragraph.Title>Challenges</Paragraph.Title>
+            <Paragraph.Content>{project.challenges}</Paragraph.Content>
+          </Paragraph>
 
-          <h3 className="text-xl font-medium ml-3 mt-8 text-white">
-            Challenges
-          </h3>
-          <p className="text-neutral-400">{project.challenges}</p>
+          <Paragraph>
+            <Paragraph.Title>Key Features</Paragraph.Title>
+            <Paragraph.Content>
+              {project.key_features.map((ft) => (
+                <div key={ft.title}>
+                  <div className="font-bold">{ft.title}</div>
+                  <div>{ft.content}</div>
+                </div>
+              ))}
+            </Paragraph.Content>
+          </Paragraph>
+          <Paragraph>
+            <Paragraph.Title>Future Improvements</Paragraph.Title>
+            <Paragraph.Content>
+              {project.key_features.map((ft) => (
+                <div key={ft.title}>
+                  <div className="font-bold">{ft.title}</div>
+                  <div>{ft.content}</div>
+                </div>
+              ))}
+            </Paragraph.Content>
+          </Paragraph>
 
-          <h3 className="text-xl font-medium ml-3 mt-8 text-white">
-            Key Features
-          </h3>
-          <p className="text-neutral-400">
-            {project.key_features.map((ft) => (
-              <div key={ft.title}>
-                <div className="font-bold">{ft.title}</div>
-                <div>{ft.content}</div>
-              </div>
-            ))}
-          </p>
-
-          <h3 className="text-xl font-medium ml-3 mt-8 text-white">
-            Future Improvements
-          </h3>
-          <p className="text-neutral-400">
-            {project.future_improvements.map((ft) => (
-              <div key={ft.title}>
-                <div className="font-bold">{ft.title}</div>
-                <div>{ft.content}</div>
-              </div>
-            ))}
-          </p>
-
-          <h3 className="text-xl font-medium ml-3 mt-8 text-white">
-            Lessons Learned
-          </h3>
-          <p className="text-neutral-400">
-            {project.lessons.map((ft) => (
-              <div key={ft.title}>
-                <div className="font-bold">{ft.title}</div>
-                <div>{ft.content}</div>
-              </div>
-            ))}
-          </p>
+          <Paragraph>
+            <Paragraph.Title>Lessons Learned</Paragraph.Title>
+            <Paragraph.Content>
+              {project.key_features.map((ft) => (
+                <div key={ft.title}>
+                  <div className="font-bold">{ft.title}</div>
+                  <div>{ft.content}</div>
+                </div>
+              ))}
+            </Paragraph.Content>
+          </Paragraph>
         </div>
         <div className="bg-neutral-950 border border-neutral-800 rounded-md p-4"></div>
       </Section>
