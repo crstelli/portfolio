@@ -4,7 +4,6 @@ import { Title } from "@/components/Title";
 import { projects } from "@/data/projects";
 
 import { Image } from "@/components/works/Image";
-import { Paragraph } from "@/components/works/Paragraph";
 import {
   Calendar,
   Clock,
@@ -27,6 +26,8 @@ export default async function page({ params }: Props) {
 
   if (!project) return <div>404 - Project Not Found</div>;
 
+  const { default: Content } = await import(`@/projects/${project.slug}.mdx`);
+
   return (
     <main className="mt-20 min-h-screen max-w-screen">
       <Section>
@@ -44,7 +45,8 @@ export default async function page({ params }: Props) {
       </Section>
       <Section className="grid grid-cols-[5fr_3fr] gap-8">
         <div className="flex flex-col items-start gap-10">
-          <Paragraph>
+          <Content />
+          {/* <Paragraph>
             <Paragraph.Title>Project Overview</Paragraph.Title>
             <Paragraph.Content>{project.overview}</Paragraph.Content>
           </Paragraph>
@@ -83,7 +85,7 @@ export default async function page({ params }: Props) {
           <Paragraph>
             <Paragraph.Title>Lessons Learned & Considerations</Paragraph.Title>
             <Paragraph.Content>{project.lessons}</Paragraph.Content>
-          </Paragraph>
+          </Paragraph> */}
         </div>
         <div className="bg-neutral-950 border flex flex-col items-start gap-4 self-start border-neutral-800 rounded-md p-4">
           <h5 className="self-center text-center text-xl font-bold">
