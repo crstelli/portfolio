@@ -35,66 +35,51 @@ export default async function page({ params }: Props) {
           <h3 className="text-xl font-medium ml-3 text-white">
             Project Overview
           </h3>
-          <p className="text-neutral-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-            veritatis corrupti sit iure nihil molestias pariatur odit aliquid
-            nam a ullam, tenetur, illum explicabo ducimus illo velit alias et
-            dolorem. Repellendus reprehenderit in sed autem vero, accusantium
-            excepturi. Alias, iste.
-          </p>
+          <p className="text-neutral-400">{project.overview}</p>
           <h3 className="text-xl font-medium ml-3 mt-8 text-white">
-            Dettagli tecnici
+            Technical Decisions
           </h3>
-          <p className="text-neutral-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-            veritatis corrupti sit iure nihil molestias pariatur odit aliquid
-            nam a ullam, tenetur, illum explicabo ducimus illo velit alias et
-            dolorem. Repellendus reprehenderit in sed autem vero, accusantium
-            excepturi. Alias, iste.
-          </p>
+          <p className="text-neutral-400">{project.technical_decisions}</p>
 
           <h3 className="text-xl font-medium ml-3 mt-8 text-white">
             Challenges
           </h3>
-          <p className="text-neutral-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-            veritatis corrupti sit iure nihil molestias pariatur odit aliquid
-            nam a ullam, tenetur, illum explicabo ducimus illo velit alias et
-            dolorem. Repellendus reprehenderit in sed autem vero, accusantium
-            excepturi. Alias, iste.
-          </p>
+          <p className="text-neutral-400">{project.challenges}</p>
 
           <h3 className="text-xl font-medium ml-3 mt-8 text-white">
             Key Features
           </h3>
           <p className="text-neutral-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-            veritatis corrupti sit iure nihil molestias pariatur odit aliquid
-            nam a ullam, tenetur, illum explicabo ducimus illo velit alias et
-            dolorem. Repellendus reprehenderit in sed autem vero, accusantium
-            excepturi. Alias, iste.
+            {project.key_features.map((ft) => (
+              <div key={ft.title}>
+                <div className="font-bold">{ft.title}</div>
+                <div>{ft.content}</div>
+              </div>
+            ))}
           </p>
 
           <h3 className="text-xl font-medium ml-3 mt-8 text-white">
             Future Improvements
           </h3>
           <p className="text-neutral-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-            veritatis corrupti sit iure nihil molestias pariatur odit aliquid
-            nam a ullam, tenetur, illum explicabo ducimus illo velit alias et
-            dolorem. Repellendus reprehenderit in sed autem vero, accusantium
-            excepturi. Alias, iste.
+            {project.future_improvements.map((ft) => (
+              <div key={ft.title}>
+                <div className="font-bold">{ft.title}</div>
+                <div>{ft.content}</div>
+              </div>
+            ))}
           </p>
 
           <h3 className="text-xl font-medium ml-3 mt-8 text-white">
             Lessons Learned
           </h3>
           <p className="text-neutral-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-            veritatis corrupti sit iure nihil molestias pariatur odit aliquid
-            nam a ullam, tenetur, illum explicabo ducimus illo velit alias et
-            dolorem. Repellendus reprehenderit in sed autem vero, accusantium
-            excepturi. Alias, iste.
+            {project.lessons.map((ft) => (
+              <div key={ft.title}>
+                <div className="font-bold">{ft.title}</div>
+                <div>{ft.content}</div>
+              </div>
+            ))}
           </p>
         </div>
         <div className="bg-neutral-950 border border-neutral-800 rounded-md p-4"></div>

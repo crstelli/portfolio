@@ -20,8 +20,8 @@ export const project1: Project = {
     "react-hot-toast",
     "react-range",
   ],
-  github: "https://github.com/crstelli/shoppy-website",
   features: ["Responsive Design", "Login with Google", "Order Tracking"],
+  github: "https://github.com/crstelli/shoppy-website",
   images: [
     "/shoppy-website/preview.png",
     "/shoppy-website/image-1.png",
@@ -30,4 +30,11 @@ export const project1: Project = {
     "/shoppy-website/image-4.png",
     "/shoppy-website/image-5.png",
   ],
+
+  overview: "overview",
+  technical_decisions: "technical_decisions",
+  challenges: "challenges",
+  key_features: [{ title: "title1", content: "content" }],
+  future_improvements: [{ title: "title2", content: "content" }],
+  lessons: [{ title: "title3", content: "content" }],
 };
