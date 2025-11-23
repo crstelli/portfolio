@@ -14,79 +14,79 @@ export const project4: Project = {
     {
       name: "Next.js",
       icon: "/techstack-logos/nextjs.svg",
-      description: "desc",
+      description: "",
     },
 
     {
       name: "React",
       icon: "/techstack-logos/react.svg",
-      description: "desc",
+      description: "",
     },
 
     {
       name: "Supabase",
       icon: "/techstack-logos/supabase.svg",
-      description: "desc",
+      description: "",
     },
 
     {
       name: "TailwindCSS",
       icon: "/techstack-logos/tailwindcss.svg",
-      description: "desc",
+      description: "",
     },
 
     {
       name: "Typescript",
       icon: "/techstack-logos/typescript.svg",
-      description: "desc",
+      description: "",
     },
 
     {
       name: "Vercel",
       icon: "/techstack-logos/vercel.svg",
-      description: "desc",
+      description: "",
     },
 
     {
       name: "Shadcn/ui",
       icon: "/techstack-logos/shadcn.svg",
-      description: "desc",
+      description: "",
     },
 
     {
-      name: "lucide-react",
-      icon: "",
-      description: "desc",
+      name: "Lucide React",
+      icon: "/techstack-logos/lucidereact.svg",
+      description: "",
     },
 
     {
-      name: "react-hot-toasts",
-      icon: "",
-      description: "desc",
+      name: "React Hot Toast",
+      icon: "/techstack-logos/reacthottoast.png",
+      description: "",
     },
 
     {
-      name: "react-hook-form",
-      icon: "",
-      description: "desc",
+      name: "React Hook Form",
+      icon: "/techstack-logos/reacthookform.svg",
+      description: "",
     },
 
     {
       name: "Leaflet",
-      icon: "",
-      description: "desc",
+      icon: "/techstack-logos/leaflet.png",
+      description: "",
     },
 
     {
       name: "React Leaflet",
-      icon: "",
-      description: "desc",
+      icon: "/techstack-logos/reactleaflet.svg",
+      description: "",
     },
 
     {
       name: "Three.js",
-      icon: "",
-      description: "desc",
+      icon: "/techstack-logos/threejs.svg",
+      description: "",
     },
   ],
   features: ["Responsive Design", "Map Integration", "3D Model"],
