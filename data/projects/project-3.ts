@@ -14,43 +14,43 @@ export const project3: Project = {
     {
       name: "Next.js",
       icon: "/techstack-logos/nextjs.svg",
-      description: "desc",
+      description: "",
     },
 
     {
       name: "React",
       icon: "/techstack-logos/react.svg",
-      description: "desc",
+      description: "",
     },
 
     {
       name: "TailwindCSS",
       icon: "/techstack-logos/tailwindcss.svg",
-      description: "desc",
+      description: "",
     },
 
     {
       name: "Typescript",
       icon: "/techstack-logos/typescript.svg",
-      description: "desc",
+      description: "",
     },
 
     {
       name: "Vercel",
       icon: "/techstack-logos/vercel.svg",
-      description: "desc",
+      description: "",
     },
 
     {
       name: "Embla Carousel",
-      icon: "",
-      description: "desc",
+      icon: "/techstack-logos/emblacarousel.svg",
+      description: "",
     },
 
     {
-      name: "lucide-react",
-      icon: "",
-      description: "desc",
+      name: "Lucide React",
+      icon: "/techstack-logos/lucidereact.svg",
+      description: "",
     },
   ],
   features: ["Responsive Design", "Modern Carousel", "Google Maps Integration"],
