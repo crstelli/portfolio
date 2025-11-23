@@ -15,8 +15,8 @@ export const metadata = {
 
 export default function page() {
   return (
-    <main>
-      <Section className="mt-20 min-h-screen">
+    <main className="lg:mt-5">
+      <Section className="min-h-screen">
         <Title>About Me</Title>
         <Subtitle>
           This section offers a clear overview of the mindset, values, and
@@ -31,7 +31,9 @@ export default function page() {
           <div className="row-span-2 min-[900px]:sticky top-25 max-w-[500px] p-4 justify-self-center rounded-md border border-neutral-800 self-start bg-neutral-950">
             <div className="flex flex-col gap-3 items-center">
               <div className="size-30 bg-primary rounded-full"></div>
-              <h3 className="font-bold text-2xl">Giuseppe Crescitelli</h3>
+              <h3 className="font-bold text-xl min-[350px]:text-2xl">
+                Giuseppe Crescitelli
+              </h3>
             </div>
             <p className="bg-neutral-900 mt-3 text-center text-sm p-3 rounded-md border border-neutral-800 italic">
               Self-taught frontend developer driven by modern technologies,{" "}
