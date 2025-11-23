@@ -23,7 +23,7 @@ export default function page() {
           <h1 className="text-4xl ml-4 font-bold text-white">
             Meet <span className="text-primary">Giuseppe</span>
           </h1>
-          <div className="row-span-2 w-[80%] p-4 justify-self-center rounded-md border border-neutral-800 self-start bg-neutral-950">
+          <div className="row-span-2 sticky top-20 w-[80%] p-4 justify-self-center rounded-md border border-neutral-800 self-start bg-neutral-950">
             <div className="flex flex-col gap-3 items-center">
               <div className="size-30 bg-primary rounded-full"></div>
               <h3 className="font-bold text-2xl">Giuseppe Crescitelli</h3>
@@ -62,9 +62,11 @@ export default function page() {
           </div>
           <div>
             <Content />
-            <Button className="mt-4" size="lg">
-              Get in Touch
-            </Button>
+            <Link href={"/contact"}>
+              <Button className="mt-4" size="lg">
+                Get in Touch &rarr;
+              </Button>
+            </Link>
           </div>
         </div>
       </Section>
