@@ -14,67 +14,67 @@ export const project1: Project = {
     {
       name: "Next.js",
       icon: "/techstack-logos/nextjs.svg",
-      description: "desc",
+      description: "",
     },
 
     {
       name: "React",
       icon: "/techstack-logos/react.svg",
-      description: "desc",
+      description: "",
     },
 
     {
       name: "Supabase",
       icon: "/techstack-logos/supabase.svg",
-      description: "desc",
+      description: "",
     },
 
     {
       name: "TailwindCSS",
       icon: "/techstack-logos/tailwindcss.svg",
-      description: "desc",
+      description: "",
     },
 
     {
       name: "Typescript",
       icon: "/techstack-logos/typescript.svg",
-      description: "desc",
+      description: "",
     },
 
     {
       name: "Vercel",
       icon: "/techstack-logos/vercel.svg",
-      description: "desc",
+      description: "",
     },
 
     {
       name: "Auth.js",
-      icon: "",
-      description: "desc",
+      icon: "/techstack-logos/authjs.png",
+      description: "",
     },
 
     {
       name: "date-fns",
-      icon: "",
-      description: "desc",
+      icon: "/techstack-logos/datefns.png",
+      description: "",
     },
 
     {
       name: "lucide-react",
-      icon: "",
-      description: "desc",
+      icon: "/techstack-logos/lucidereact.svg",
+      description: "",
     },
 
     {
       name: "react-hot-toasts",
-      icon: "",
-      description: "desc",
+      icon: "/techstack-logos/reacthottoast.png",
+      description: "",
     },
 
     {
       name: "react-range",
       icon: "",
-      description: "desc",
+      description: "",
     },
   ],
   features: ["Responsive Design", "Login with Google", "Order Tracking"],

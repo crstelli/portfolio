@@ -5,7 +5,7 @@ const components: MDXComponents = {
   h2: ({ children }) => (
     <h2 className="text-xl text-white font-bold ml-4 mt-12 mb-2">{children}</h2>
   ),
-  p: ({ children }) => <p className="my-3">{children}</p>,
+  p: ({ children }) => <p className="my-3 text-neutral-300">{children}</p>,
   strong: ({ children }) => <strong className="text-white">{children}</strong>,
   em: ({ children }) => <em className="text-white">{children}</em>,
   ul: ({ children }) => <ul className="text-primary list-disc">{children}</ul>,

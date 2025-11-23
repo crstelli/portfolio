@@ -48,7 +48,7 @@ export default async function page({ params }: Props) {
         <div className="row-span-3">
           <Content />
         </div>
-        <div className="bg-neutral-950 border flex flex-col items-start gap-4 self-start border-neutral-800 rounded-md p-4">
+        <div className="bg-neutral-950 border flex flex-col items-start gap-3 self-start border-neutral-800 rounded-md p-4">
           <h5 className="self-center text-center text-xl font-bold">
             {project.name}
           </h5>
@@ -77,7 +77,7 @@ export default async function page({ params }: Props) {
             />
           </div>
           <Link target="blank" href={project.github} className="w-full">
-            <Button className="flex items-center gap-2 w-full mt-10 justify-center">
+            <Button className="flex items-center py-2 gap-2 w-full mt-10 justify-center">
               <GitHub />
               View GitHub Repository
             </Button>
