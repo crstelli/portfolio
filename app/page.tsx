@@ -8,9 +8,20 @@ import { WorkCard } from "@/components/workPreviewCard/WorkCard";
 import { links } from "@/data/links";
 import { projects } from "@/data/projects";
 import { techStack } from "@/data/techstack";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Download, GitHub, Navigation, User } from "react-feather";
+
+export const metadata: Metadata = {
+  title: {
+    template: "%s - crescitelli.dev",
+    default: "Welcome - crescitelli.dev",
+  },
+
+  description:
+    "Front-end Developer specializing in Next.js and TypeScript. Explore my projects, tech stack, experience, and background, and get in touch for collaborations.",
+};
 
 export default function page() {
   return (

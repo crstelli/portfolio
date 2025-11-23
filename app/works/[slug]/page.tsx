@@ -21,6 +21,28 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
+
+  if (!project) {
+    return {
+      title: "Project not found",
+      description: "This project does not exist.",
+    };
+  }
+
+  return {
+    title: `${project.name} | Projects`,
+    description: project.description,
+    openGraph: {
+      title: project.name,
+      description: project.description,
+      images: project.images[0] ? [project.images[0]] : [],
+    },
+  };
+}
+
 export default async function page({ params }: Props) {
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
