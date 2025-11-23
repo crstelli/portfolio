@@ -47,6 +47,11 @@ export const project2: Project = {
       description: "desc",
     },
     {
+      name: "react-hook-form",
+      icon: "",
+      description: "desc",
+    },
+    {
       name: "date-fns",
       icon: "",
       description: "desc",

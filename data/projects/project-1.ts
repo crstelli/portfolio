@@ -54,25 +54,25 @@ export const project1: Project = {
     },
 
     {
-      name: "date-fns",
+      name: "Date Fns",
       icon: "/techstack-logos/datefns.png",
       description: "",
     },
 
     {
-      name: "lucide-react",
+      name: "Lucide React",
       icon: "/techstack-logos/lucidereact.svg",
       description: "",
     },
 
     {
-      name: "react-hot-toasts",
+      name: "React Hot Toast",
       icon: "/techstack-logos/reacthottoast.png",
       description: "",
     },
 
     {
-      name: "react-range",
+      name: "React Range",
       icon: "",
       description: "",
     },
