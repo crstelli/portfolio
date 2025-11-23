@@ -8,8 +8,11 @@ const components: MDXComponents = {
   p: ({ children }) => <p className="my-3">{children}</p>,
   strong: ({ children }) => <strong className="text-white">{children}</strong>,
   em: ({ children }) => <em className="text-white">{children}</em>,
-  ul: ({ children }) => <ul className="text-primary list-disc">{children}</ul>,
+  ul: ({ children }) => (
+    <ul className="marker:text-primary list-disc">{children}</ul>
+  ),
   ol: ({ children }) => <ol className="list-decimal">{children}</ol>,
+  li: ({ children }) => <li className="text-neutral-300">{children}</li>,
 };
 
 export function useMDXComponents(): MDXComponents {
