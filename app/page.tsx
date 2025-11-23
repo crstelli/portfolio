@@ -10,6 +10,7 @@ import { techStack } from "@/data/techstack";
 import Image from "next/image";
 import Link from "next/link";
 import {
+  ChevronDown,
   Download,
   GitHub,
   Linkedin,
@@ -25,6 +26,10 @@ export default function page() {
       <main className="h-full w-full flex flex-col items-center justify-center">
         <div className="w-full h-screen bg-grid absolute top-0 left-0 -z-1"></div>
         <Section className="grid h-screen items-center grid-cols-2">
+          <ChevronDown
+            className="absolute bottom-10 left-1/2 -translate-x-1/2 chevron-down"
+            size={50}
+          />
           <div className="flex flex-col gap-2">
             <span className="uppercase self-start bg-primary text-black px-4 rounded-full">
               Web Developer

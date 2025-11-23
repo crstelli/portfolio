@@ -69,3 +69,21 @@
     --angle: 360deg;
   }
 }
+
+.chevron-down {
+  animation: 3s scroll-down infinite;
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(20px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(20px);
+  }
+}
