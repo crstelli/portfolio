@@ -17,7 +17,7 @@ interface Props {
 
 function WorkCard({ children }: Props) {
   return (
-    <div className="w-[500px] grid grid-rows-[auto_1fr] border border-neutral-700 overflow-hidden rounded-md">
+    <div className="max-w-[500px] grid grid-rows-[auto_1fr] border border-neutral-700 overflow-hidden rounded-md">
       {children}
     </div>
   );

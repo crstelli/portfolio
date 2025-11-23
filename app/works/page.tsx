@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function page() {
   return (
-    <main className="max-w-screen min-h-screen mt-20">
+    <main className="max-w-screen min-h-screen lg:mt-5">
       <Section>
         <Title>Explore My Works</Title>
         <Subtitle>
@@ -22,7 +22,7 @@ export default function page() {
           demonstrates how I turn ideas into functional, purposeful digital
           experiences.
         </Subtitle>
-        <div className="mt-15 grid grid-cols-2 gap-y-20 justify-items-center">
+        <div className="mt-15 grid max-[1100px]:grid-cols-1 grid-cols-2 gap-y-20 justify-items-center">
           {projects.map((p) => (
             <WorkCard key={p.id}>
               <WorkCard.Image
