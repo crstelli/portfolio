@@ -17,7 +17,7 @@ export default function page() {
           demonstrates how I turn ideas into functional, purposeful digital
           experiences.
         </Subtitle>
-        <div className="mt-15 grid grid-cols-2 gap-y-30 justify-items-center">
+        <div className="mt-15 grid grid-cols-2 gap-y-20 justify-items-center">
           {projects.map((p) => (
             <WorkCard key={p.id}>
               <WorkCard.Image
