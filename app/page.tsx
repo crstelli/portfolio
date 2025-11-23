@@ -34,7 +34,7 @@ export default function page() {
               in Next.js and TypeScript. I build fast, accessible, and scalable
               interfaces using modern technologies.
             </p>
-            <div className="flex items-stretch gap-4 mt-6">
+            <div className="flex items-stretch gap-4 mt-6 z-1">
               <a href={links.cv} download className="flex">
                 <Button className="flex items-center gap-2">
                   <Download />
