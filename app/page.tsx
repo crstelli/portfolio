@@ -25,12 +25,12 @@ export default function page() {
     <>
       <main className="h-full w-full flex flex-col items-center justify-center">
         <div className="w-full h-screen bg-grid absolute top-0 left-0 -z-1"></div>
-        <Section className="grid h-screen items-center grid-cols-2">
+        <Section className="flex flex-col max-lg:justify-center lg:grid h-screen items-center grid-cols-2">
           <ChevronDown
             className="absolute bottom-10 left-1/2 -translate-x-1/2 chevron-down"
             size={50}
           />
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 mx-auto max-lg:max-w-[600px]">
             <span className="uppercase self-start bg-primary text-black px-4 rounded-full">
               Web Developer
             </span>
@@ -56,12 +56,10 @@ export default function page() {
               </Link>
             </div>
           </div>
-          <div className="flex justify-end">
-            <div className="relative max-w-[320px] w-full aspect-square">
-              <Image src="/hero.svg" alt="Hero image" fill />
-            </div>
+          <div className="max-lg:hidden relative justify-self-end lg:max-w-[320px] w-full aspect-square">
+            <Image src="/hero.svg" alt="Hero image" fill />
           </div>
-          <div className="absolute top-40 right-20 w-[400px] h-[400px] bg-primary/20 blur-[120px] rounded-full"></div>
+          <div className="absolute top-40 right-20 w-[400px] h-[400px] bg-primary/10 lg:bg-primary/20 blur-[120px] rounded-full"></div>
         </Section>
       </main>
       <Section>
@@ -73,7 +71,7 @@ export default function page() {
           tangible results.
         </Subtitle>
 
-        <div className="flex flex-col relative items-center mt-15 gap-12">
+        <div className="flex flex-col relative items-center mt-20 gap-12">
           <div className="absolute top-0 h-full w-0.5 bg-primary -z-1 scale-105">
             <div className="size-5 border-2 border-primary rounded-full absolute -bottom-2 translate-y-1/2 left-1/2 -translate-x-1/2"></div>
           </div>
@@ -100,7 +98,7 @@ export default function page() {
           and maintainable interfaces. A selection of technologies I work with
           seamlessly to build scalable and reliable projects.
         </Subtitle>
-        <div className="grid grid-cols-3 auto-rows-[1fr] justify-center gap-4 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-[1fr] justify-center gap-4 mt-10">
           {techStack.map((ts) => (
             <TechStackCard
               key={ts.label}
@@ -117,7 +115,7 @@ export default function page() {
           Learn more about me, my skills, and my approach to creating impactful
           digital experiences.
         </Subtitle>
-        <div className="grid grid-cols-2 items-center mt-10">
+        <div className="flex flex-col lg:grid grid-cols-2 items-center mt-10">
           <video
             src="/animation.webm"
             autoPlay
@@ -126,7 +124,7 @@ export default function page() {
             playsInline
             className="w-full max-w-[320px] mx-auto"
           />
-          <div className="mt-15 flex flex-col">
+          <div className="mt-15 flex flex-col max-lg:max-w-[600px]">
             <span className="mt-4 flex items-center gap-3">
               <User className="text-primary" size={30} />
               <h3 className="text-3xl font-bold text-white">Giuseppe</h3>
@@ -172,7 +170,7 @@ export default function page() {
             Get in touch
           </button>
         </Link>
-        <div className="grid grid-cols-[3fr_2fr] grid-rows-[1fr-auto] mt-10 gap-10">
+        <div className="flex flex-col mx-auto max-w-[600px] lg:max-w-none lg:grid grid-cols-[3fr_2fr] grid-rows-[1fr-auto] mt-10 gap-10">
           <form className="bg-neutral-950 row-span-2 border border-neutral-800 rounded-md p-4">
             <h4 className="text-lg font-medium text-white">Send a message</h4>
             <div className="grid grid-cols-2 mt-4 gap-4">
@@ -225,7 +223,7 @@ export default function page() {
           </div>
           <div className="bg-neutral-950 border border-neutral-800 flex flex-col items-start rounded-md p-4">
             <h4 className="text-lg font-medium text-white">Connect with me</h4>
-            <div className="flex mt-auto gap-4">
+            <div className="flex mt-4 gap-4">
               <a
                 target="blank"
                 href={links.github}

@@ -13,7 +13,7 @@ function Body({ children, link }: Props) {
   return (
     <div className="bg-neutral-950 p-4 flex flex-col gap-2">
       {children}
-      <Link href={link} className="mt-auto self-start">
+      <Link href={link} className="max-lg:mt-4 mt-auto self-start">
         <Button>Explore</Button>
       </Link>
     </div>

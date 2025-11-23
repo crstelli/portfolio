@@ -6,7 +6,7 @@ type Props = NextImageProps & {
 
 function Image({ invert, ...rest }: Props) {
   return (
-    <div className={`relative aspect-3/2 ${invert ? "order-1" : null}`}>
+    <div className={`relative aspect-3/2 ${invert ? "lg:order-1" : null}`}>
       <NextImage {...rest} />
     </div>
   );
