@@ -3,6 +3,7 @@ import { ContactInfo } from "@/components/ContactInfo";
 import { ScrollBottomChevron } from "@/components/ScrollBottomChevron";
 import { Section } from "@/components/Section";
 import { Subtitle } from "@/components/Subtitle";
+import { TechStack } from "@/components/TechStack";
 import { TechStackCard } from "@/components/TechStackCard";
 import { Title } from "@/components/Title";
 import { WorkCard } from "@/components/workPreviewCard/WorkCard";
@@ -106,16 +107,18 @@ export default function page() {
           and maintainable interfaces. A selection of technologies I work with
           seamlessly to build scalable and reliable projects.
         </Subtitle>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-[1fr] justify-center gap-4 mt-10">
-          {techStack.map((ts) => (
-            <TechStackCard
-              key={ts.label}
-              image={ts.image}
-              label={ts.label}
-              content={ts.content}
-            />
-          ))}
-        </div>
+        <TechStack>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-[1fr] justify-center gap-4 mt-10">
+            {techStack.map((ts) => (
+              <TechStackCard
+                key={ts.label}
+                image={ts.image}
+                label={ts.label}
+                content={ts.content}
+              />
+            ))}
+          </div>
+        </TechStack>
       </Section>
       <Section>
         <Title>About Me</Title>

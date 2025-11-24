@@ -19,6 +19,7 @@ import { TechStackCard } from "@/components/TechStackCard";
 import { Gallery } from "@/components/gallery/Gallery";
 import { GalleryImage } from "@/components/gallery/GalleryImage";
 import Image from "next/image";
+import { TechStack } from "@/components/TechStack";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -145,14 +146,16 @@ export default async function page({ params }: Props) {
 
         <div className="bg-neutral-950 max-w-[550px] w-full mx-auto border flex flex-col gap-4 self-start border-neutral-800 rounded-md p-4">
           <h5 className="text-xl font-bold">Tech Stack</h5>
-          {project.technologies.map((tech) => (
-            <TechStackCard
-              key={tech.name}
-              image={tech.icon}
-              label={tech.name}
-              content={tech.description}
-            />
-          ))}
+          <TechStack>
+            {project.technologies.map((tech) => (
+              <TechStackCard
+                key={tech.name}
+                image={tech.icon}
+                label={tech.name}
+                content={tech.description}
+              />
+            ))}
+          </TechStack>
         </div>
 
         {nextProject && (
