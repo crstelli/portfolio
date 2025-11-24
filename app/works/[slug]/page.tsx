@@ -56,7 +56,7 @@ export default async function page({ params }: Props) {
       <Section>
         <Title>{project.name}</Title>
         <Subtitle>{project.description}</Subtitle>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-15">
+        <div className="grid grid-cols-1 sm:grid-cols-2 min-[1050px]:grid-cols-3 gap-2 mt-15">
           {project.images.map((img) => (
             <Image
               src={img}
@@ -66,8 +66,8 @@ export default async function page({ params }: Props) {
           ))}
         </div>
       </Section>
-      <Section className="grid grid-cols-1 min-[880px]:grid-cols-2 min-[970px]:grid-cols-[5fr_4fr] min-[1135px]:grid-cols-[5fr_3fr] grid-rows-[auto_auto_1fr] gap-8">
-        <div className="min-[880px]:max-[970px]:col-span-2 row-span-3 p-2">
+      <Section className="grid grid-cols-1 min-[940px]:grid-cols-2 min-[1050px]:grid-cols-[5fr_4fr] min-[1150px]:grid-cols-[3fr_2fr] grid-rows-[auto_auto_1fr] gap-8">
+        <div className="min-[940px]:max-[1050px]:col-span-2 row-span-3 p-2">
           <Content />
         </div>
         <div className="bg-neutral-950 max-w-[550px] w-full mx-auto border flex flex-col items-start gap-3 self-start border-neutral-800 rounded-md p-4">
@@ -75,7 +75,7 @@ export default async function page({ params }: Props) {
             {project.name}
           </h5>
           <div className="h-px w-full bg-neutral-700"></div>
-          <div className="mt-4 gap-3 px-4 grid grid-cols-1 min-[450px]:grid-cols-2 w-full">
+          <div className="mt-4 gap-3 px-4 grid grid-cols-1 min-[480px]:grid-cols-2 w-full">
             <ColorIcon
               icon={Calendar}
               label="Built in"
