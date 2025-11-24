@@ -59,7 +59,7 @@ export default async function page({ params }: Props) {
   if (projectIndex < projects.length) nextProject = projects[projectIndex + 1];
 
   return (
-    <main className="min-h-screen max-w-screen lg:mt-5">
+    <main className="min-h-screen max-w-screen max-sm:mt-30 mt-20">
       <Section className="relative">
         <Link href={"/works"}>
           <Button className="absolute top-8 flex items-center gap-2 left-0">
