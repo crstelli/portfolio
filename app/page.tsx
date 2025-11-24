@@ -40,7 +40,7 @@ export default function page() {
             <h1 className="text-2xl sm:text-4xl text-white font-bold">
               Giuseppe Crescitelli
             </h1>
-            <p className="text-sm sm:text-md">
+            <p className="max-sm:text-sm">
               Front-end Developer focused on UX and performance, with experience
               in Next.js and TypeScript. I build fast, accessible, and scalable
               interfaces using modern technologies.
