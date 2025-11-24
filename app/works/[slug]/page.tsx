@@ -46,6 +46,11 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
+export async function generateStaticParams() {
+  const slugs = projects.map((p) => ({ slug: p.slug }));
+  return slugs;
+}
+
 export default async function page({ params }: Props) {
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);

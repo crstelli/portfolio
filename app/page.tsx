@@ -12,7 +12,7 @@ import { techStack } from "@/data/techstack";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Download, GitHub, Navigation, User } from "react-feather";
+import { Download, GitHub, MousePointer, User } from "react-feather";
 
 export const metadata: Metadata = {
   title: {
@@ -167,7 +167,7 @@ export default function page() {
           className="self-center hover:scale-120 duration-150 mt-15"
         >
           <button className="glowing-border bg-primary text-black hover:bg-neutral-950 hover:text-primary px-5 py-2.5 uppercase flex items-center gap-3 cursor-pointer text-xl">
-            <Navigation strokeWidth={2.5} />
+            <MousePointer />
             Get in touch
           </button>
         </Link>
