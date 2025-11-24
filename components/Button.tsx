@@ -16,13 +16,11 @@ function Button({
   children,
   onClick,
 }: Props) {
-  const base =
-    "cursor-pointer rounded-md duration-150 focus:outline-none focus:ring-2 focus:ring-offset-3 focus:ring-offset-black";
+  const base = "cursor-pointer rounded-md duration-150";
 
   const variants = {
-    primary: "text-black bg-primary hover:bg-primary-dark focus:ring-primary",
-    secondary:
-      "text-white border border-neutral-900 hover:bg-neutral-950 focus:ring-white",
+    primary: "text-black bg-primary hover:bg-primary-dark",
+    secondary: "text-white border border-neutral-900 hover:bg-neutral-950",
     icon: "aspect-square flex items-center justify-center border border-neutral-800",
   };
 
