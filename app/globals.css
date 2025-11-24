@@ -105,4 +105,8 @@
   *::-webkit-scrollbar-thumb:hover {
     @apply bg-neutral-950;
   }
+
+  .toast {
+    @apply bg-neutral-950! text-white!;
+  }
 }

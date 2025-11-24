@@ -23,10 +23,10 @@ function ContactInfo() {
     });
 
     if (!res.ok) {
-      toast.error("Error on form submission.");
+      toast.error("Sorry! There was an error.");
     }
 
-    toast.success("Email Sent");
+    toast.success("Message sent successfully!");
 
     reset();
   }
@@ -53,7 +53,7 @@ function ContactInfo() {
           />
           <input
             {...register("phone")}
-            type="number"
+            type="phone"
             placeholder="Phone Number (optional)"
             className="bg-neutral-900 px-4 max-[350px]:col-span-2 py-2 rounded-md"
           />
