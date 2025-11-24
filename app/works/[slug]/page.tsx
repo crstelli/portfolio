@@ -2,8 +2,6 @@ import { Section } from "@/components/Section";
 import { Subtitle } from "@/components/Subtitle";
 import { Title } from "@/components/Title";
 import { projects } from "@/data/projects";
-
-import { Image } from "@/components/works/Image";
 import {
   Calendar,
   Clock,
@@ -16,6 +14,8 @@ import { ColorIcon } from "@/components/ColorIcon";
 import { Button } from "@/components/Button";
 import Link from "next/link";
 import { TechStackCard } from "@/components/TechStackCard";
+import { Gallery } from "@/components/gallery/Gallery";
+import { GalleryImage } from "@/components/gallery/GalleryImage";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -56,15 +56,11 @@ export default async function page({ params }: Props) {
       <Section>
         <Title>{project.name}</Title>
         <Subtitle>{project.description}</Subtitle>
-        <div className="grid grid-cols-1 sm:grid-cols-2 min-[1050px]:grid-cols-3 gap-2 mt-15">
+        <Gallery>
           {project.images.map((img) => (
-            <Image
-              src={img}
-              alt={`Showcase image of ${project.name}.`}
-              key={img}
-            />
+            <GalleryImage key={img} name={project.name} src={img} />
           ))}
-        </div>
+        </Gallery>
       </Section>
       <Section className="grid grid-cols-1 min-[940px]:grid-cols-2 min-[1050px]:grid-cols-[5fr_4fr] min-[1150px]:grid-cols-[3fr_2fr] grid-rows-[auto_auto_1fr] gap-8">
         <div className="min-[940px]:max-[1050px]:col-span-2 row-span-3 p-2">
