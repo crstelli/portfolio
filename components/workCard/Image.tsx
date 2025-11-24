@@ -7,11 +7,11 @@ interface Props {
 
 function Image({ src, alt }: Props) {
   return (
-    <div className="w-full aspect-2/1 relative overflow-hidden">
+    <div className="w-full aspect-video relative overflow-hidden">
       <NextImage
         src={src}
         alt={alt}
-        className="object-cover object-center rounded-t-md"
+        className="object-cover object-top rounded-t-md"
         fill
       />
     </div>
