@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function page() {
   return (
-    <main className="min-h-screen lg:mt-5">
+    <main className="max-sm:mt-30 mt-20">
       <Section>
         <Title>Contact</Title>
         <Subtitle>

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function page() {
   return (
-    <main className="lg:mt-5">
+    <main className="max-sm:mt-30 mt-20">
       <Section className="min-h-screen">
         <Title>About Me</Title>
         <Subtitle>
