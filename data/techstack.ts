@@ -65,6 +65,11 @@ export const techStack: TechStackItem[] = [
       "A flexible hosting platform I use for static deployments and quick prototypes.",
   },
   {
+    image: "/techstack-logos/vite.svg",
+    label: "Vite",
+    content: "I use Vite as a fast, modern build tool for my web projects.",
+  },
+  {
     image: "/techstack-logos/prettier.svg",
     label: "Prettier",
     content:
