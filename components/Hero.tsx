@@ -21,14 +21,22 @@ function Hero() {
           interfaces using modern technologies.
         </p>
         <div className="flex items-stretch gap-4 mt-6 z-1">
-          <a href={links.cv} download className="flex">
-            <Button icon={Download}>Download my CV</Button>
-          </a>
-          <Link target="blank" href={links.github}>
-            <Button variant="icon" size="sm" className="p-2.5">
-              <GitHub size={25} />
-            </Button>
-          </Link>
+          <Button
+            icon={Download}
+            href={{ ref: links.cv, type: "a" }}
+            size="lg"
+            download
+          >
+            Download my CV
+          </Button>
+          <Button
+            variant="secondary"
+            size="square"
+            href={{ ref: links.github, type: "a" }}
+            target="blank"
+          >
+            <GitHub size={25} />
+          </Button>
         </div>
       </div>
       <div className="max-lg:hidden relative justify-self-end lg:max-w-[320px] w-full aspect-square">
