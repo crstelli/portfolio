@@ -1,7 +1,6 @@
 import { Download, GitHub } from "react-feather";
 import { Button } from "./Button";
 import { Section } from "./Section";
-import Link from "next/link";
 import { links } from "@/data/links";
 import Image from "next/image";
 

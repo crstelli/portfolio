@@ -9,14 +9,12 @@ import { Subtitle } from "@/components/Subtitle";
 import { TechStack } from "@/components/TechStack";
 import { TechStackCard } from "@/components/TechStackCard";
 import { Title } from "@/components/Title";
-import { WorkCard } from "@/components/workPreviewCard/WorkCard";
-import { links } from "@/data/links";
+import { WorksPreviews } from "@/components/workPreview/WorksPreviews";
 import { projects } from "@/data/projects";
 import { techStack } from "@/data/techstack";
 import { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { Download, GitHub, MousePointer, User } from "react-feather";
+import { MousePointer, User } from "react-feather";
 
 export const metadata: Metadata = {
   title: {
@@ -46,27 +44,7 @@ export default function page() {
           tangible results.
         </Subtitle>
 
-        <div className="flex flex-col relative items-center mt-20 gap-12">
-          <div className="absolute top-0 h-full w-0.5 bg-primary -z-1 scale-105">
-            <div className="size-5 border-2 border-primary rounded-full absolute -bottom-2 translate-y-1/2 left-1/2 -translate-x-1/2"></div>
-          </div>
-          {projects.map((p, i) => (
-            <WorkCard key={p.id} invert={i % 2 === 1}>
-              <WorkCard.Image
-                src={p.images[0]}
-                alt={`Preview image of ${p.name}.`}
-                className="object-cover object-center"
-                quality={50}
-                sizes="(max-width: 355px): 100vw, 355px"
-                fill
-              ></WorkCard.Image>
-              <WorkCard.Body link={`/works/${p.slug}`}>
-                <WorkCard.Title tag={p.stack}>{p.name}</WorkCard.Title>
-                <WorkCard.Description>{p.description}</WorkCard.Description>
-              </WorkCard.Body>
-            </WorkCard>
-          ))}
-        </div>
+        <WorksPreviews projects={projects} />
       </Section>
       <Section>
         <Title>Tech Stack</Title>
