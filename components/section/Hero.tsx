@@ -19,7 +19,13 @@ function Hero() {
           <Button icon={Download} href={{ ref: links.cv, type: "a" }} size="lg" download>
             Download my CV
           </Button>
-          <Button variant="secondary" size="square" href={{ ref: links.github, type: "a" }} target="blank">
+          <Button
+            ariaLabel="GitHub Profile"
+            variant="secondary"
+            size="square"
+            href={{ ref: links.github, type: "a" }}
+            target="blank"
+          >
             <GitHub size={25} />
           </Button>
         </div>

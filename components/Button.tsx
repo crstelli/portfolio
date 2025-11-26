@@ -16,6 +16,7 @@ interface Props {
   download?: boolean;
   disabled?: boolean;
   target?: string;
+  ariaLabel?: string;
 }
 
 function Button({
@@ -28,6 +29,7 @@ function Button({
   href,
   children,
   onClick,
+  ariaLabel,
   ...rest
 }: Props) {
   const base = "cursor-pointer rounded-md duration-150";
@@ -56,6 +58,7 @@ function Button({
   if (href?.type === "a") {
     return (
       <a
+        aria-label={ariaLabel}
         href={href.ref}
         onClick={onClick}
         className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center justify-center gap-2" : ""}`}
@@ -80,6 +83,7 @@ function Button({
     if (variant === "special")
       return (
         <Link
+          aria-label={ariaLabel}
           href={href.ref}
           className={`${base} glowing-border bg-primary text-black hover:bg-neutral-950 hover:text-primary px-5 py-2.5 uppercase text-xl ${className}`}
         >
@@ -91,6 +95,7 @@ function Button({
       );
     return (
       <Link
+        aria-label={ariaLabel}
         href={href.ref}
         onClick={onClick}
         className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center justify-center gap-2" : ""}`}
@@ -113,6 +118,7 @@ function Button({
 
   return (
     <button
+      aria-label={ariaLabel}
       disabled={disabled}
       onClick={onClick}
       className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center justify-center gap-2" : ""} disabled:bg-neutral-800 disabled:text-neutral-400 disabled:cursor-not-allowed`}
