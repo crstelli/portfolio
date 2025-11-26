@@ -1,15 +1,16 @@
 "use client";
 
 import NextImage from "next/image";
-import { useGallery } from "./Gallery";
-import { Modal } from "../modal/Modal";
+
+import { Modal } from "@/components/modal/Modal";
+import { useGallery } from "./Provider";
 
 interface ImageProps {
   src: string;
   name: string;
 }
 
-function GalleryImage({ src, name }: ImageProps) {
+function Image({ src, name }: ImageProps) {
   const { open, setOpen } = useGallery();
 
   return (
@@ -45,4 +46,4 @@ function GalleryImage({ src, name }: ImageProps) {
   );
 }
 
-export { GalleryImage };
+export { Image };

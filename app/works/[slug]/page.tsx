@@ -16,7 +16,6 @@ import { ColorIcon } from "@/components/ColorIcon";
 import { Button } from "@/components/Button";
 import Link from "next/link";
 import { Gallery } from "@/components/gallery/Gallery";
-import { GalleryImage } from "@/components/gallery/GalleryImage";
 import Image from "next/image";
 import { TechStackList } from "@/components/techStack/TechStackList";
 import { notFound } from "next/navigation";
@@ -56,7 +55,7 @@ export default async function page({ params }: ParamsProps) {
         <Subtitle>{project.description}</Subtitle>
         <Gallery>
           {project.images.map((img) => (
-            <GalleryImage key={img} name={project.name} src={img} />
+            <Gallery.Image key={img} name={project.name} src={img} />
           ))}
         </Gallery>
       </Section>

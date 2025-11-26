@@ -1,45 +1,22 @@
-"use client";
-import {
-  createContext,
-  Dispatch,
-  ReactNode,
-  SetStateAction,
-  useContext,
-  useState,
-} from "react";
+import type { ReactNode } from "react";
+
+import { Provider } from "./Provider";
+import { Image } from "./Image";
 
 interface GalleryProps {
   children: ReactNode;
 }
 
-interface ContextTypes {
-  open: string;
-  setOpen: Dispatch<SetStateAction<string>>;
-}
-
-const GalleryContext = createContext<null | ContextTypes>(null);
-
 function Gallery({ children }: GalleryProps) {
-  const [open, setOpen] = useState("");
-
   return (
-    <GalleryContext.Provider value={{ open, setOpen }}>
+    <Provider>
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2 mt-15">
         {children}
       </div>
-    </GalleryContext.Provider>
+    </Provider>
   );
 }
 
-function useGallery() {
-  const context = useContext(GalleryContext);
+Gallery.Image = Image;
 
-  if (!context)
-    throw new Error(
-      "You are trying to access GalleryContext outside his provider."
-    );
-
-  return context;
-}
-
-export { Gallery, useGallery };
+export { Gallery };
