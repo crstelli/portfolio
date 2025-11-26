@@ -18,11 +18,12 @@ import Link from "next/link";
 import { Gallery } from "@/components/gallery/Gallery";
 import { GalleryImage } from "@/components/gallery/GalleryImage";
 import Image from "next/image";
-import { links } from "@/data/links";
 import { TechStackList } from "@/components/techStack/TechStackList";
+import { notFound } from "next/navigation";
 
 export { generateMetadata } from "./generateMetadata";
 export { generateStaticParams } from "./generateStaticParams";
+export const dynamicParams = false;
 
 export interface ParamsProps {
   params: Promise<{ slug: string }>;
@@ -30,39 +31,27 @@ export interface ParamsProps {
 
 export default async function page({ params }: ParamsProps) {
   const { slug } = await params;
+
   const project = projects.find((p) => p.slug === slug);
 
-  if (!project)
-    return (
-      <div className="m-auto text-center">
-        <h1 className="text-6xl text-primary italic">OPS!</h1>
-        <p className="text-3xl mt-4">This project does not exists (yet?)</p>
-        <Link href={"/works"}>
-          <Button
-            size="lg"
-            className="mt-10 mx-auto flex gap-2 items-center justify-center"
-          >
-            <ArrowLeft />
-            Go back to my works
-          </Button>
-        </Link>
-      </div>
-    );
-
+  if (!project) notFound();
   const { default: Content } = await import(`@/projects/${project.slug}.mdx`);
 
   const projectIndex = projects.indexOf(project);
-  let nextProject;
-  if (projectIndex < projects.length) nextProject = projects[projectIndex + 1];
+  const nextProject =
+    projectIndex < projects.length ? projects[projectIndex + 1] : null;
 
   return (
-    <main className="min-h-screen max-w-screen">
+    <main className="min-h-screen">
       <Section className="relative">
-        <Link href={"/works"} className="max-[640px]:hidden">
-          <Button className="absolute max-sm:top-35 top-25 flex items-center gap-2 left-3">
-            <ArrowLeft /> Works
-          </Button>
-        </Link>
+        <Button
+          href={{ ref: "/works", type: "Link" }}
+          className="max-[640px]:hidden absolute max-sm:top-35 top-25 flex items-center gap-2 left-3"
+          icon={ArrowLeft}
+        >
+          Works
+        </Button>
+
         <Title>{project.name}</Title>
         <Subtitle>{project.description}</Subtitle>
         <Gallery>
