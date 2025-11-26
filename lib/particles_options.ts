@@ -21,10 +21,10 @@ export const particles_options = {
         speed: 0.1,
         sync: false,
       },
-      value: { min: 0, max: 0.2 },
+      value: 0.1,
     },
     size: {
-      value: { min: 1, max: 1 },
+      value: 1,
     },
   },
 };
