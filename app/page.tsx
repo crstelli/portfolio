@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
-      <main className="h-full w-full">
+      <main className="h-full w-full bg-black">
         <GridBackground />
         <Blob />
         <ScrollBottomButton section="works" />

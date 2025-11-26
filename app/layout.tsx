@@ -8,6 +8,7 @@ import { ClickSound } from "@/components/ClickSound";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/navbar/Navbar";
 import { ScrollTopButton } from "@/components/section/ScrollTopButton";
+import { ParticlesBackground } from "@/components/ParticlesBackground";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: Props) {
           <Navbar />
           {children}
           <ScrollTopButton />
+          <ParticlesBackground />
         </div>
         <Footer />
       </body>
