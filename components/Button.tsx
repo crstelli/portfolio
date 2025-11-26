@@ -32,7 +32,7 @@ function Button({
 
   const variants = {
     primary: "text-black bg-primary hover:bg-primary-dark",
-    secondary: "text-white border border-neutral-900 hover:bg-neutral-950",
+    secondary: "border border-neutral-900 hover:bg-neutral-950",
     special:
       "glowing-border bg-primary text-black hover:bg-neutral-950 hover:text-primary uppercase hover:scale-120 py-2.5! text-lg",
   };
