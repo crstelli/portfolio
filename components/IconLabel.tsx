@@ -7,7 +7,7 @@ interface Props {
   content: string;
 }
 
-function ColorIcon({ label, content, icon: Icon }: Props) {
+function IconLabel({ label, content, icon: Icon }: Props) {
   return (
     <div className="grid grid-cols-[auto_1fr] grid-rows-2 gap-x-2 items-center">
       <div className="bg-primary/10 p-2 rounded-md row-span-2">
@@ -19,4 +19,4 @@ function ColorIcon({ label, content, icon: Icon }: Props) {
   );
 }
 
-export { ColorIcon };
+export { IconLabel };

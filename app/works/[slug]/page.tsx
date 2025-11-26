@@ -12,13 +12,14 @@ import {
   Layers,
   Radio,
 } from "react-feather";
-import { ColorIcon } from "@/components/ColorIcon";
+import { ColorIcon } from "@/components/IconLabel";
 import { Button } from "@/components/Button";
 import Link from "next/link";
 import { Gallery } from "@/components/gallery/Gallery";
 import Image from "next/image";
 import { TechStackList } from "@/components/techStack/TechStackList";
 import { notFound } from "next/navigation";
+import { WorkInfoCard } from "@/components/WorkInfoCard";
 
 export { generateMetadata } from "./generateMetadata";
 export { generateStaticParams } from "./generateStaticParams";
@@ -59,54 +60,12 @@ export default async function page({ params }: ParamsProps) {
           ))}
         </Gallery>
       </Section>
+
       <Section className="grid pt-0! grid-cols-1 min-[940px]:grid-cols-2 min-[1050px]:grid-cols-[5fr_4fr] min-[1150px]:grid-cols-[3fr_2fr] grid-rows-[auto_auto_1fr] gap-8">
         <div className="min-[940px]:max-[1050px]:col-span-2 row-span-3 max-sm:px-4">
           <Content />
         </div>
-        <div className="bg-neutral-950 max-w-[550px] w-full mx-auto border flex flex-col items-start gap-3 self-start border-neutral-800 rounded-md p-4">
-          <h5 className="self-center text-center text-xl font-bold">
-            {project.name}
-          </h5>
-          <div className="h-px w-full bg-neutral-700"></div>
-          <div className="mt-4 gap-3 px-4 grid grid-cols-1 min-[480px]:grid-cols-2 w-full">
-            <ColorIcon
-              icon={Calendar}
-              label="Built in"
-              content={`${project.date.month}, ${project.date.year}`}
-            />
-
-            <ColorIcon
-              icon={Layers}
-              label="Stack used"
-              content={project.stack}
-            />
-            <ColorIcon
-              icon={Clock}
-              label="Worked on for"
-              content={project.worked_for}
-            />
-            <ColorIcon
-              icon={HardDrive}
-              label="Hosted on"
-              content={project.hosted_on}
-            />
-          </div>
-          <Link target="blank" href={project.github} className="w-full">
-            <Button className="flex items-center py-2 gap-2 w-full mt-10 justify-center">
-              <GitHub />
-              View GitHub Repository
-            </Button>
-          </Link>
-          <Link target="blank" href={project.live_view} className="w-full">
-            <Button
-              variant="secondary"
-              className="flex items-center gap-2 w-full justify-center"
-            >
-              <Radio />
-              Live View
-            </Button>
-          </Link>
-        </div>
+        <WorkInfoCard project={project} />
 
         <div className="bg-neutral-950 max-w-[550px] w-full mx-auto border flex flex-col gap-4 self-start border-neutral-800 rounded-md p-4">
           <h5 className="text-xl font-bold">Tech Stack</h5>
