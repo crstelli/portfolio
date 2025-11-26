@@ -1,5 +1,6 @@
 import "@/app/globals.css";
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: Props) {
           <ParticlesBackground />
         </div>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
