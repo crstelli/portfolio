@@ -4,7 +4,7 @@ import { links } from "@/data/links";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
-import { GitHub, Linkedin, Mail, MapPin, Send } from "react-feather";
+import { GitHub, Linkedin, Mail, MapPin, Send, Target } from "react-feather";
 import { Button } from "./Button";
 import { FormData } from "./EmailTemplate";
 
@@ -89,12 +89,12 @@ function ContactInfo() {
       <div className="bg-neutral-950 border border-border flex flex-col items-start rounded-md p-4">
         <h4 className="text-lg font-medium text-white">Connect with me</h4>
         <div className="flex mt-4 gap-4">
-          <a target="blank" href={links.github} className="p-2 bg-neutral-900 rounded-md">
+          <Button variant="secondary" href={{ ref: links.github, type: "a" }} target="blank" size="square">
             <GitHub size={22} />
-          </a>
-          <a target="blank" href={links.linkedin} className="p-2 bg-neutral-900 rounded-md">
+          </Button>
+          <Button variant="secondary" href={{ ref: links.linkedin, type: "a" }} target="blank" size="square">
             <Linkedin size={22} />
-          </a>
+          </Button>
         </div>
       </div>
     </div>
