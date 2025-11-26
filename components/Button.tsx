@@ -40,7 +40,7 @@ function Button({
   const sizes = {
     sm: "text-sm",
     md: "px-3 py-1",
-    lg: "px-6 py-3 text-lg",
+    lg: "px-6 py-2 text-lg",
     square: "aspect-square p-3",
   };
 
