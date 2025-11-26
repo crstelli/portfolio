@@ -27,6 +27,7 @@ function NextProjectCard({ project }: Props) {
         href={{ ref: `/works/${project.slug}`, type: "Link" }}
         className="justify-self-start mt-4 max-[560px]:order-1"
         icon={ArrowRight}
+        invertIcon
       >
         See more
       </Button>

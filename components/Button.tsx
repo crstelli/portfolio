@@ -10,6 +10,7 @@ interface Props {
   size?: "sm" | "md" | "lg" | "square";
   className?: React.ComponentProps<"div">["className"];
   icon?: Icon;
+  invertIcon?: boolean;
   href?: { ref: string; type: "Link" | "a" };
 
   download?: boolean;
@@ -21,6 +22,7 @@ function Button({
   size = "md",
   className,
   icon: Icon,
+  invertIcon = false,
   href,
   children,
   onClick,
@@ -57,8 +59,17 @@ function Button({
         className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center justify-center gap-2" : ""}`}
         {...rest}
       >
-        {Icon && <Icon size={iconSizes[size]} />}
-        {children}
+        {invertIcon ? (
+          <>
+            {Icon && <Icon size={iconSizes[size]} />}
+            {children}
+          </>
+        ) : (
+          <>
+            {Icon && <Icon size={iconSizes[size]} />}
+            {children}
+          </>
+        )}
       </a>
     );
   }
@@ -83,8 +94,17 @@ function Button({
         className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center justify-center gap-2" : ""}`}
         {...rest}
       >
-        {Icon && <Icon size={iconSizes[size]} />}
-        {children}
+        {invertIcon ? (
+          <>
+            {children}
+            {Icon && <Icon size={iconSizes[size]} />}
+          </>
+        ) : (
+          <>
+            {Icon && <Icon size={iconSizes[size]} />}
+            {children}
+          </>
+        )}
       </Link>
     );
   }
@@ -95,8 +115,17 @@ function Button({
       className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center justify-center gap-2" : ""}`}
       {...rest}
     >
-      {Icon && <Icon size={iconSizes[size]} />}
-      {children}
+      {invertIcon ? (
+        <>
+          {children}
+          {Icon && <Icon size={iconSizes[size]} />}
+        </>
+      ) : (
+        <>
+          {Icon && <Icon size={iconSizes[size]} />}
+          {children}
+        </>
+      )}
     </button>
   );
 }
