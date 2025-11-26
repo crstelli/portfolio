@@ -21,7 +21,7 @@ export const particles_options = {
         speed: 0.1,
         sync: false,
       },
-      value: 0.1,
+      value: 0.3,
     },
     size: {
       value: 1,
