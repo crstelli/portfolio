@@ -2,24 +2,13 @@ import { Section } from "@/components/Section";
 import { Subtitle } from "@/components/Subtitle";
 import { Title } from "@/components/Title";
 import { projects } from "@/data/projects";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Calendar,
-  Clock,
-  GitHub,
-  HardDrive,
-  Layers,
-  Radio,
-} from "react-feather";
-import { ColorIcon } from "@/components/IconLabel";
+import { ArrowLeft } from "react-feather";
 import { Button } from "@/components/Button";
-import Link from "next/link";
 import { Gallery } from "@/components/gallery/Gallery";
-import Image from "next/image";
-import { TechStackList } from "@/components/techStack/TechStackList";
 import { notFound } from "next/navigation";
 import { WorkInfoCard } from "@/components/WorkInfoCard";
+import { StackInfoCard } from "@/components/StackInfoCard";
+import { NextProjectCard } from "@/components/NextProjectCard";
 
 export { generateMetadata } from "./generateMetadata";
 export { generateStaticParams } from "./generateStaticParams";
@@ -66,39 +55,9 @@ export default async function page({ params }: ParamsProps) {
           <Content />
         </div>
         <WorkInfoCard project={project} />
+        <StackInfoCard stack={project.technologies} />
 
-        <div className="bg-neutral-950 max-w-[550px] w-full mx-auto border flex flex-col gap-4 self-start border-neutral-800 rounded-md p-4">
-          <h5 className="text-xl font-bold">Tech Stack</h5>
-          <TechStackList stack={project.technologies} />
-        </div>
-
-        {nextProject && (
-          <div className="bg-neutral-950 min-[940px]:col-span-2 max-[940px]:mx-auto mt-8 p-4 max-w-[600px] rounded-md border gap-x-4 border-neutral-900 grid grid-rows-[auto_auto_auto_auto] grid-cols-1 min-[560px]:grid-cols-[auto_auto]">
-            <h5 className="text-neutral-500 uppercase text-sm min-[560px]:col-span-2">
-              Next project
-            </h5>
-            <h4 className="text-xl text-white font-bold">{nextProject.name}</h4>
-            <div className="relative max-[560px]:order-1 max-[560px]:mt-4 row-span-3 my-auto w-[200px] aspect-video rounded-md overflow-hidden">
-              <Image
-                src={nextProject.images[0]}
-                alt={`Preview image of ${nextProject.name}.`}
-                sizes="200px"
-                fill
-              />
-            </div>
-            <p className="text-sm mt-2 text-neutral-400">
-              {nextProject.description}
-            </p>
-            <Link
-              href={`/works/${nextProject.slug}`}
-              className="self-end mt-4 max-[560px]:order-1"
-            >
-              <Button className="flex items-center gap-2">
-                See more <ArrowRight />
-              </Button>
-            </Link>
-          </div>
-        )}
+        {nextProject && <NextProjectCard project={project} />}
       </Section>
     </main>
   );
