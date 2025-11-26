@@ -1,8 +1,9 @@
+import type { Metadata } from "next";
+
 import { ContactInfo } from "@/components/ContactInfo";
-import { Section } from "@/components/Section";
-import { Subtitle } from "@/components/Subtitle";
-import { Title } from "@/components/Title";
-import { Metadata } from "next";
+import { Section } from "@/components/section/Section";
+import { Subtitle } from "@/components/section/Subtitle";
+import { Title } from "@/components/section/Title";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -21,8 +22,7 @@ export default function page() {
       <Section>
         <Title>Contact</Title>
         <Subtitle>
-          If you&apos;re interested in collaborating or discussing new
-          opportunities, I&apos;d be glad to hear from you.
+          If you&apos;re interested in collaborating or discussing new opportunities, I&apos;d be glad to hear from you.
         </Subtitle>
 
         <h1 className="text-center mt-15 mb-10 text-3xl font-bold">

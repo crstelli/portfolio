@@ -1,5 +1,6 @@
-import { links } from "@/data/links";
 import Link from "next/link";
+import { links } from "@/data/links";
+
 import { GitHub, Linkedin, Mail } from "react-feather";
 
 function Footer() {

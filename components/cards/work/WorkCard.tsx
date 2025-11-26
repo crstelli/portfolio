@@ -1,5 +1,6 @@
-import { Image } from "./Image";
 import type { ReactNode } from "react";
+
+import { Image } from "./Image";
 import { Body } from "./Body";
 import { Header } from "./Header";
 import { Title } from "./Title";

@@ -1,10 +1,11 @@
 "use client";
 
-import { ChevronUp } from "react-feather";
-import { Button } from "./Button";
 import { useEffect, useState } from "react";
 
-function ScrollButton() {
+import { Button } from "../Button";
+import { ChevronUp } from "react-feather";
+
+function ScrollTopButton() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -31,4 +32,4 @@ function ScrollButton() {
   );
 }
 
-export { ScrollButton };
+export { ScrollTopButton };

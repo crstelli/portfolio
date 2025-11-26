@@ -1,6 +1,7 @@
-import { BookOpen, User } from "react-feather";
 import AboutContent from "@/data/about_intro.mdx";
+
 import { Button } from "./Button";
+import { BookOpen, User } from "react-feather";
 
 function AboutHero() {
   return (
@@ -19,11 +20,7 @@ function AboutHero() {
           <h3 className="text-3xl font-bold text-white">Giuseppe</h3>
         </span>
         <AboutContent />
-        <Button
-          icon={BookOpen}
-          className="self-end"
-          href={{ ref: "/about", type: "Link" }}
-        >
+        <Button icon={BookOpen} className="self-end" href={{ ref: "/about", type: "Link" }}>
           Keep reading
         </Button>
       </div>

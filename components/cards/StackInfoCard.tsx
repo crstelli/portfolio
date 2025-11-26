@@ -1,5 +1,5 @@
-import { TechStackList } from "./techStack/TechStackList";
 import type { TechStackItem } from "@/data/techstack";
+import { TechStackList } from "../techStack/TechStackList";
 
 interface Props {
   stack: TechStackItem[];

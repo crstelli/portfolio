@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
-
-import { Image } from "./Image";
-import { Body } from "./Body";
-import { Title } from "./Title";
-import { Description } from "./Description";
 import React from "react";
+
+import { Body } from "./Body";
+import { Description } from "./Description";
+import { Image } from "./Image";
+import { Title } from "./Title";
 
 interface Props {
   children: ReactNode;
@@ -16,10 +16,7 @@ function WorkCard({ children, invert = false }: Props) {
   const enhanced = React.Children.map(children, (child) => {
     if (!React.isValidElement(child)) return child;
 
-    return React.cloneElement(
-      child as React.ReactElement<{ invert?: boolean }>,
-      { invert }
-    );
+    return React.cloneElement(child as React.ReactElement<{ invert?: boolean }>, { invert });
   });
 
   return (

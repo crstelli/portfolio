@@ -1,13 +1,13 @@
-import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
+import { notFound } from "next/navigation";
 
-import { Section } from "@/components/Section";
-import { Subtitle } from "@/components/Subtitle";
-import { Title } from "@/components/Title";
 import { Button } from "@/components/Button";
-import { WorkInfoCard } from "@/components/WorkInfoCard";
-import { StackInfoCard } from "@/components/StackInfoCard";
-import { NextProjectCard } from "@/components/NextProjectCard";
+import { NextProjectCard } from "@/components/cards/NextProjectCard";
+import { Section } from "@/components/section/Section";
+import { StackInfoCard } from "@/components/cards/StackInfoCard";
+import { Subtitle } from "@/components/section/Subtitle";
+import { Title } from "@/components/section/Title";
+import { WorkInfoCard } from "@/components/cards/WorkInfoCard";
 
 import { Gallery } from "@/components/gallery/Gallery";
 import { ArrowLeft } from "react-feather";
@@ -29,8 +29,7 @@ export default async function page({ params }: ParamsProps) {
   const { default: Content } = await import(`@/projects/${project.slug}.mdx`);
 
   const projectIndex = projects.indexOf(project);
-  const nextProject =
-    projectIndex < projects.length ? projects[projectIndex + 1] : null;
+  const nextProject = projectIndex < projects.length ? projects[projectIndex + 1] : null;
 
   return (
     <main className="min-h-screen">

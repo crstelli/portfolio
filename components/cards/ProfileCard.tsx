@@ -1,8 +1,10 @@
 import Image from "next/image";
-import { GitHub, Linkedin, Send } from "react-feather";
-import { Button } from "./Button";
 import { links } from "@/data/links";
-import { Highlight } from "./Highlight";
+
+import { Button } from "../Button";
+import { Highlight } from "../Highlight";
+
+import { GitHub, Linkedin, Send } from "react-feather";
 
 function ProfileCard() {
   return (
@@ -17,24 +19,16 @@ function ProfileCard() {
             fill
           />
         </div>
-        <h3 className="font-bold text-xl min-[350px]:text-2xl">
-          Giuseppe Crescitelli
-        </h3>
+        <h3 className="font-bold text-xl min-[350px]:text-2xl">Giuseppe Crescitelli</h3>
       </div>
       <p className="bg-neutral-900 mt-3 text-center text-sm p-3 rounded-md border border-neutral-800 italic">
-        Self-taught frontend developer driven by modern technologies,{" "}
-        <Highlight>clean</Highlight> and{" "}
-        <Highlight>maintainable code</Highlight>, and an unrelenting hunger to
-        grow, <Highlight>learn</Highlight>, and succeed.
+        Self-taught frontend developer driven by modern technologies, <Highlight>clean</Highlight> and{" "}
+        <Highlight>maintainable code</Highlight>, and an unrelenting hunger to grow, <Highlight>learn</Highlight>, and
+        succeed.
       </p>
 
       <div className="flex flex-col gap-2">
-        <Button
-          href={{ ref: "/contact", type: "Link" }}
-          className="mt-10"
-          icon={Send}
-          size="lg"
-        >
+        <Button href={{ ref: "/contact", type: "Link" }} className="mt-10" icon={Send} size="lg">
           Get in Touch
         </Button>
 
@@ -48,12 +42,7 @@ function ProfileCard() {
           GitHub
         </Button>
 
-        <Button
-          href={{ ref: links.linkedin, type: "a" }}
-          target="blank"
-          variant="secondary"
-          icon={Linkedin}
-        >
+        <Button href={{ ref: links.linkedin, type: "a" }} target="blank" variant="secondary" icon={Linkedin}>
           Linkedin
         </Button>
       </div>

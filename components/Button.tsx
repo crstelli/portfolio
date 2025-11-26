@@ -14,6 +14,7 @@ interface Props {
   href?: { ref: string; type: "Link" | "a" };
 
   download?: boolean;
+  disabled?: boolean;
   target?: string;
 }
 
@@ -23,6 +24,7 @@ function Button({
   className,
   icon: Icon,
   invertIcon = false,
+  disabled = false,
   href,
   children,
   onClick,
@@ -111,8 +113,9 @@ function Button({
 
   return (
     <button
+      disabled={disabled}
       onClick={onClick}
-      className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center justify-center gap-2" : ""}`}
+      className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center justify-center gap-2" : ""} disabled:bg-neutral-800 disabled:text-neutral-400 disabled:cursor-not-allowed`}
       {...rest}
     >
       {invertIcon ? (

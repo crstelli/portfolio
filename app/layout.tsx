@@ -7,7 +7,7 @@ import { Toaster } from "react-hot-toast";
 import { ClickSound } from "@/components/ClickSound";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/navbar/Navbar";
-import { ScrollButton } from "@/components/ScrollButton";
+import { ScrollTopButton } from "@/components/section/ScrollTopButton";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -24,11 +24,7 @@ interface Props {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html
-      lang="en"
-      data-scroll-behavior="smooth"
-      className={`${inter.variable} scroll-smooth`}
-    >
+    <html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} scroll-smooth`}>
       <body className="w-full bg-black text-gray-300">
         <div className="min-h-screen w-full justify-items-center flex flex-col">
           <Toaster
@@ -39,7 +35,7 @@ export default function RootLayout({ children }: Props) {
           <ClickSound />
           <Navbar />
           {children}
-          <ScrollButton />
+          <ScrollTopButton />
         </div>
         <Footer />
       </body>

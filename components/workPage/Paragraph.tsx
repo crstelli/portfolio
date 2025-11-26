@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
-import { ParagraphTitle } from "./ParagraphTitle";
+
 import { ParagraphContent } from "./ParagraphContent";
+import { ParagraphTitle } from "./ParagraphTitle";
 
 interface Props {
   children: ReactNode;

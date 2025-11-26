@@ -1,13 +1,7 @@
 "use client";
 
-import {
-  Dispatch,
-  ReactNode,
-  SetStateAction,
-  useContext,
-  useState,
-} from "react";
-import { createContext } from "react";
+import { createContext, useContext, useState } from "react";
+import type { Dispatch, ReactNode, SetStateAction } from "react";
 
 interface Props {
   children: ReactNode;
@@ -23,18 +17,13 @@ const TechStackContext = createContext<null | ContextProps>(null);
 function Provider({ children }: Props) {
   const [open, setOpen] = useState("");
 
-  return (
-    <TechStackContext.Provider value={{ open, setOpen }}>
-      {children}
-    </TechStackContext.Provider>
-  );
+  return <TechStackContext.Provider value={{ open, setOpen }}>{children}</TechStackContext.Provider>;
 }
 
 function useTechStack() {
   const context = useContext(TechStackContext);
 
-  if (!context)
-    throw new Error("You cannot access TechContext outside his provider.");
+  if (!context) throw new Error("You cannot access TechContext outside his provider.");
   return context;
 }
 
