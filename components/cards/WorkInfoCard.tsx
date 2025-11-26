@@ -10,7 +10,7 @@ interface Props {
 
 function WorkInfoCard({ project }: Props) {
   return (
-    <div className="bg-neutral-950 max-w-[550px] w-full mx-auto border flex flex-col items-start gap-3 self-start border-neutral-800 rounded-md p-4">
+    <div className="bg-neutral-950 max-w-[550px] w-full mx-auto border flex flex-col items-start gap-3 self-start border-border rounded-md p-4">
       <h5 className="self-center text-center text-xl font-bold">{project.name}</h5>
       <div className="h-px w-full bg-neutral-700"></div>
       <div className="my-4 gap-3 px-4 grid grid-cols-1 min-[480px]:grid-cols-2 w-full">

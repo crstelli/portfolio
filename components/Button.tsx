@@ -34,7 +34,7 @@ function Button({
 
   const variants = {
     primary: "text-black bg-primary hover:shadow-[0_0_30px_5px_rgba(148,216,45,.1)]",
-    secondary: "border border-neutral-900 hover:bg-neutral-950 hover:shadow-[0_0_30px_5px_rgba(255,255,255,.05)]",
+    secondary: "border border-border hover:bg-neutral-950 hover:shadow-[0_0_30px_5px_rgba(255,255,255,.05)]",
     special:
       "glowing-border bg-primary text-black hover:bg-neutral-950 hover:text-primary uppercase hover:scale-120 py-2.5! text-lg",
   };

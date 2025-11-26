@@ -31,7 +31,7 @@ function Image({ src, name }: ImageProps) {
       <div
         onClick={() => setOpen(src)}
         className={
-          "relative w-full aspect-video duration-200 hover:scale-110 hover:z-1 border border-neutral-800 hover:border-white rounded-md"
+          "relative w-full aspect-video duration-200 hover:scale-110 hover:z-1 border border-border hover:border-white rounded-md"
         }
       >
         <NextImage

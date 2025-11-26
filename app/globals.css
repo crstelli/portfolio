@@ -3,6 +3,8 @@
 @theme {
   --color-primary: #94d82d;
   --color-primary-dark: #74b816;
+
+  --color-border: #262626;
 }
 
 *::selection {

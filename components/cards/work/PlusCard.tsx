@@ -4,7 +4,7 @@ interface Props {
 
 function PlusCard({ quantity }: Props) {
   return (
-    <span className="bg-neutral-950 border text-sm border-neutral-800 text-neutral-400 px-2 rounded-sm py-1">
+    <span className="bg-neutral-950 border text-sm border-border text-neutral-400 px-2 rounded-sm py-1">
       +{quantity} more
     </span>
   );

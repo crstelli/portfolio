@@ -5,9 +5,7 @@ interface Props {
 function TechnologyTag({ children }: Props) {
   if (children === "React")
     return (
-      <span className="bg-neutral-900 text-sky-400 border text-sm border-sky-400 px-2 rounded-sm py-1">
-        {children}
-      </span>
+      <span className="bg-neutral-900 text-sky-400 border text-sm border-sky-400 px-2 rounded-sm py-1">{children}</span>
     );
 
   if (children === "Supabase")
@@ -24,11 +22,7 @@ function TechnologyTag({ children }: Props) {
       </span>
     );
 
-  return (
-    <span className="bg-neutral-900 border text-sm border-neutral-700 px-2 rounded-sm py-1">
-      {children}
-    </span>
-  );
+  return <span className="bg-neutral-900 border text-sm border-border px-2 rounded-sm py-1">{children}</span>;
 }
 
 export { TechnologyTag };

@@ -15,7 +15,7 @@ function Card({ label, image, content }: Props) {
   return (
     <div
       onClick={() => handleClick(label)}
-      className={`group min-h-[50px] relative duration-150 overflow-hidden border-neutral-900 hover:scale-105 border p-2 rounded-md grid grid-cols-[auto_1fr] items-center bg-neutral-950 ${content ? "cursor-pointer" : ""}`}
+      className={`group min-h-[50px] relative duration-150 overflow-hidden border-border hover:scale-105 border p-2 rounded-md grid grid-cols-[auto_1fr] items-center bg-neutral-950 ${content ? "cursor-pointer" : ""}`}
     >
       <div
         className={`left-4 flex items-center gap-4 absolute duration-300 ${

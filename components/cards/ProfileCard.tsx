@@ -8,7 +8,7 @@ import { GitHub, Linkedin, Send } from "react-feather";
 
 function ProfileCard() {
   return (
-    <div className="row-span-2 min-[900px]:sticky top-25 max-w-[500px] p-4 justify-self-center rounded-md border border-neutral-800 self-start bg-neutral-950">
+    <div className="row-span-2 min-[900px]:sticky top-25 max-w-[500px] p-4 justify-self-center rounded-md border border-border self-start bg-neutral-950">
       <div className="flex flex-col gap-3 items-center">
         <div className="size-30 rounded-full relative overflow-hidden">
           <Image
@@ -21,7 +21,7 @@ function ProfileCard() {
         </div>
         <h3 className="font-bold text-xl min-[350px]:text-2xl">Giuseppe Crescitelli</h3>
       </div>
-      <p className="bg-neutral-900 mt-3 text-center text-sm p-3 rounded-md border border-neutral-800 italic">
+      <p className="bg-neutral-900 mt-3 text-center text-sm p-3 rounded-md border border-border italic">
         Self-taught frontend developer driven by modern technologies, <Highlight>clean</Highlight> and{" "}
         <Highlight>maintainable code</Highlight>, and an unrelenting hunger to grow, <Highlight>learn</Highlight>, and
         succeed.

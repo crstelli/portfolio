@@ -34,10 +34,7 @@ function ContactInfo() {
 
   return (
     <div className="flex flex-col mx-auto max-w-[600px] lg:max-w-none lg:grid grid-cols-[3fr_2fr] grid-rows-[1fr-auto] mt-10 gap-10">
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="bg-neutral-950 row-span-2 border border-neutral-800 rounded-md p-4"
-      >
+      <form onSubmit={handleSubmit(onSubmit)} className="bg-neutral-950 row-span-2 border border-border rounded-md p-4">
         <h4 className="text-lg font-medium text-white">Send a message</h4>
         <div className="grid grid-cols-2 mt-4 gap-4">
           <input
@@ -70,7 +67,7 @@ function ContactInfo() {
           {isSubmitting ? "Sending... " : "Send Message"}
         </Button>
       </form>
-      <div className="bg-neutral-950 border border-neutral-800 flex flex-col items-start rounded-md p-4">
+      <div className="bg-neutral-950 border border-border flex flex-col items-start rounded-md p-4">
         <h4 className="text-lg font-medium text-white">Contact Information</h4>
 
         <span className="grid grid-cols-[auto_1fr] grid-rows-2 items-center gap-x-4 mt-4">
@@ -89,7 +86,7 @@ function ContactInfo() {
           <span>Naples, Italy IT</span>
         </span>
       </div>
-      <div className="bg-neutral-950 border border-neutral-800 flex flex-col items-start rounded-md p-4">
+      <div className="bg-neutral-950 border border-border flex flex-col items-start rounded-md p-4">
         <h4 className="text-lg font-medium text-white">Connect with me</h4>
         <div className="flex mt-4 gap-4">
           <a target="blank" href={links.github} className="p-2 bg-neutral-900 rounded-md">
