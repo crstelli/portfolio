@@ -21,7 +21,7 @@ const childrenVariants = {
   show: { opacity: 1, y: 0 },
 };
 
-const AnimatedTag = motion(Tag);
+const AnimatedTag = motion.create(Tag);
 
 function Hero() {
   return (
@@ -40,7 +40,18 @@ function Hero() {
           Front-end Developer focused on UX and performance, with experience in Next.js and TypeScript. I build fast,
           accessible, and scalable interfaces using modern technologies.
         </motion.p>
-        <motion.div variants={childrenVariants} className="flex items-stretch gap-4 mt-6 z-1">
+        <motion.div
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                delay: 1,
+              },
+            },
+          }}
+          className="flex items-stretch gap-4 mt-6 z-1"
+        >
           <Button icon={Download} href={{ ref: links.cv, type: "a" }} size="lg" download>
             Download my CV
           </Button>
