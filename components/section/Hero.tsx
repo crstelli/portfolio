@@ -7,6 +7,7 @@ import { links } from "@/data/links";
 
 import { Tag } from "@/components/Tag";
 import { Button } from "@/components/Button";
+import { TypeWriter } from "@/components/TypeWriter";
 
 import { Section } from "./Section";
 import { Download, GitHub } from "react-feather";
@@ -37,8 +38,10 @@ function Hero() {
           Giuseppe Crescitelli
         </motion.h1>
         <motion.p variants={childrenVariants} className="max-sm:text-sm">
-          Front-end Developer focused on UX and performance, with experience in Next.js and TypeScript. I build fast,
-          accessible, and scalable interfaces using modern technologies.
+          <TypeWriter>
+            Front-end Developer focused on UX and performance, with experience in Next.js and TypeScript. I build fast,
+            accessible, and scalable interfaces using modern technologies.
+          </TypeWriter>
         </motion.p>
         <motion.div
           variants={{
