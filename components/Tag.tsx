@@ -3,11 +3,9 @@ interface Props {
   className?: React.ComponentProps<"span">["className"];
 }
 
-function Tag({ children, className }: Props) {
+function Tag({ children, className, ...props }: Props) {
   return (
-    <span
-      className={`bg-primary uppercase text-black px-3 rounded-full ${className}`}
-    >
+    <span className={`bg-primary uppercase text-black px-3 rounded-full ${className}`} {...props}>
       {children}
     </span>
   );
