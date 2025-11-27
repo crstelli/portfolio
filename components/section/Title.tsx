@@ -1,14 +1,24 @@
+"use client";
+
+import { motion } from "motion/react";
+
 interface Props {
   children: string;
 }
 
+const animation = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { margin: "-100px", once: true },
+};
+
 function Title({ children }: Props) {
   return (
-    <h2 className="text-center text-xl sm:text-2xl md:text-3xl uppercase">
+    <motion.h2 {...animation} className="text-center text-xl sm:text-2xl md:text-3xl uppercase">
       <Separator />
       {children}
       <Separator />
-    </h2>
+    </motion.h2>
   );
 }
 
