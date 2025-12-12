@@ -1,6 +1,8 @@
-import { projects } from "@/data/projects";
+import { getProjects } from "@/lib/projects";
 
-export async function generateStaticParams() {
-  const slugs = projects.map((p) => ({ slug: p.slug }));
-  return slugs;
+export function generateStaticParams() {
+  const data = getProjects();
+  return data.map((p) => ({
+    slug: p.slug,
+  }));
 }
