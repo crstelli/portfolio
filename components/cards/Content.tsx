@@ -1,6 +1,6 @@
 "use client";
 
-import { components } from "@/mdx-components";
+import { useMDXComponents } from "@/mdx-components";
 import { MDXRemote } from "next-mdx-remote";
 import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 
@@ -9,6 +9,7 @@ interface Props {
 }
 
 function Content({ source }: Props) {
+  const components = useMDXComponents();
   return <MDXRemote {...source} components={components} />;
 }
 
