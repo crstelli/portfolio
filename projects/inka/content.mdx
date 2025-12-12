@@ -1,0 +1,123 @@
+---
+id: 5
+slug: "inka"
+stack: "Full Stack"
+date:
+  year: 2025
+  month: "December"
+worked_for: "12 days"
+hosted_on: "Vercel"
+name: "Inka"
+description: "Inka is a fast, lightweight note-taking app designed for clarity and focus. It lets users create, edit, and organize notes with a clean text-editor experience inspired by modern knowledge tools."
+technologies:
+  - label: "Next.js"
+    image: "/techstack-logos/nextjs.svg"
+    content: ""
+  - label: "React"
+    image: "/techstack-logos/react.svg"
+    content: ""
+  - label: "PostgreSQL"
+    image: "/techstack-logos/postgresql.svg"
+    content: ""
+  - label: "Prisma"
+    image: "/techstack-logos/prisma.svg"
+    content: ""
+  - label: "TailwindCSS"
+    image: "/techstack-logos/tailwindcss.svg"
+    content: ""
+  - label: "Typescript"
+    image: "/techstack-logos/typescript.svg"
+    content: ""
+  - label: "Vercel"
+    image: "/techstack-logos/vercel.svg"
+    content: ""
+  - label: "Shadcn/ui"
+    image: "/techstack-logos/shadcn.svg"
+    content: ""
+  - label: "Auth.js"
+    image: "/techstack-logos/authjs.png"
+    content: ""
+  - label: "Lucide React"
+    image: "/techstack-logos/lucidereact.svg"
+    content: ""
+  - label: "Tip Tap"
+    image: "/techstack-logos/tiptap.jpeg"
+    content: ""
+features:
+  - "Responsive Design"
+  - "Database integration"
+  - "Markdown Editor"
+github: "https://github.com/crstelli/inka"
+live_view: "https://inka-notes.vercel.app"
+next_slug: "shoppy-website"
+---
+
+# Overview
+
+**Inka** is a fast, lightweight **note-taking application** focused on clarity, performance, and a distraction-free writing experience. It enables users to create, edit, and organize notes through a clean text-editor interface inspired by modern knowledge-management tools.
+
+The app features a sleek landing page, a frictionless Google login flow, an autosaving markdown-ready editor powered by TipTap, a responsive UI, and seamless theme switching.
+
+The project was built with **Next.js**, **React**, **TypeScript**, **TailwindCSS**, **PostgreSQL**, and **Prisma**, integrating libraries like **TipTap**, **shadcn/ui**, **lucide-react**, and **Auth.js** for authentication.
+
+## Technical Decisions
+
+- **Next.js + React**: Ensures a structured, scalable architecture with optimized routing and server-side capabilities.
+
+- **PostgreSQL + Prisma**: Provides a robust relational database layer with type-safe queries and schema-driven development.
+
+- **TailwindCSS**: Enables fast styling and a consistent design language throughout the application.
+
+- **TipTap Editor**: Delivers a powerful, extensible editor for markdown-style writing with full control over events and custom styling.
+
+- **Auth.js (Google Provider)**: Implements a secure, fast login experience with OAuth integration.
+
+- **shadcn/ui**: Supplies a modern component base aligned with the overall minimalist design.
+
+- **Vercel Deployment**: Ensures high performance, zero-config deployment, and automatic optimizations.
+
+## Challenges
+
+One major challenge was **integrating the TipTap editor** while maintaining a clean UX. Handling all editor events, managing custom styling, and syncing real-time changes required precise control over state and extensions.
+
+Implementing a **debounced saving system** was another key challenge. To prevent excessive database operations, edits are saved only after user inactivity. This system reduced write operations by **approximately 90%**, significantly improving performance and resource usage.
+
+Creating a seamless **autosave flow** required careful tuning of timers, React state, and Prisma write logic to avoid conflicts or stale data.
+
+Managing authentication with Google, integrating PostgreSQL through Prisma, and building a refined dark/light theme with shadcn/ui pushed the project to a higher level of polish and technical depth.
+
+## Key Features
+
+1. **Landing Page**: Minimalist introduction to the app and its core value: fast, focused note-taking.
+
+2. **Google Authentication**: Secure login flow powered by Auth.js and the Google provider.
+
+3. **Autosaving Editor**: Notes are saved automatically after the user stops typing.
+
+4. **Debounced Write System**: Reduces database calls by ~90% through intelligent batching of edits.
+
+5. **TipTap Markdown Editor**: Clean writing environment with rich editing capabilities.
+
+6. **Responsive Design**: Fluid layout optimized for all screen sizes.
+
+7. **Modern UI Components**: Built with shadcn/ui and enhanced with lucide-react icons.
+
+8. **Database Integration**: PostgreSQL + Prisma handles all note storage and querying.
+
+9. **Dark/Light Theme Support**: Managed with shadcn's theme provider for consistent UX.
+
+## Future Improvements
+
+- _Login_: Add traditional **email/password login** and more authentication providers.
+
+- _Sharing notes_: Allow users to **share notes** with others.
+
+- _Nested notes_: Support **nested notes** for hierarchical structures.
+
+- _Folder organization_: Introduce **folder organization** for advanced sorting and grouping.
+
+## Lessons & Final Considerations
+
+Building Inka strengthened my ability to work with **third-party libraries**, navigate documentation effectively, and integrate complex tools like TipTap into real applications. Managing authentication flows, building a relational database schema with PostgreSQL and Prisma, and optimizing performance through **debouncing** and **autosave strategies** expanded my backend and frontend competencies.
+
+This project enhanced my understanding of **full-stack architecture**, efficient data management, and the challenges of creating a polished, responsive, and extensible note-taking experience.

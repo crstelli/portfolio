@@ -1,10 +1,10 @@
-import type { Project } from "@/data/projects/type";
+import type { ProjectType } from "@/types/ProjectType";
 
 import { WorkCard } from "./WorkCard";
 import { VerticalLine } from "@/components/VerticalLine";
 
 interface Props {
-  projects: Project[];
+  projects: ProjectType[];
 }
 
 function WorksPreviews({ projects }: Props) {
@@ -14,7 +14,7 @@ function WorksPreviews({ projects }: Props) {
       {projects.map((p, i) => (
         <WorkCard key={p.id} invert={i % 2 === 1}>
           <WorkCard.Image
-            src={p.images[0]}
+            src={`/projects/${p.slug}/images/preview.jpg`}
             alt={`Preview image of ${p.name}.`}
           ></WorkCard.Image>
           <WorkCard.Body link={`/works/${p.slug}`}>

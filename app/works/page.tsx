@@ -1,5 +1,5 @@
-import { projects } from "@/data/projects";
 import type { Metadata } from "next";
+import { getProjects } from "@/lib/projects";
 
 import { Section } from "@/components/section/Section";
 import { Subtitle } from "@/components/section/Subtitle";
@@ -19,6 +19,8 @@ export const metadata: Metadata = {
 };
 
 export default function page() {
+  const projects = getProjects();
+
   return (
     <main className="min-h-screen">
       <Section>
@@ -30,7 +32,7 @@ export default function page() {
         <div className="mt-15 grid max-[1100px]:grid-cols-1 grid-cols-2 gap-y-20 justify-items-center">
           {projects.map((p) => (
             <WorkCard key={p.id}>
-              <WorkCard.Image src={p.images[0]} alt={`Preview image of ${p.name}`} />
+              <WorkCard.Image src={`/projects/${p.slug}/images/preview.jpg`} alt={`Preview image of ${p.name}`} />
               <WorkCard.Body>
                 <WorkCard.Header tag={p.stack} year={p.date.year} />
                 <WorkCard.Title>{p.name}</WorkCard.Title>
