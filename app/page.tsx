@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-
-import { projects } from "@/data/projects";
 import { techstack } from "@/data/techstack";
 
 import { AboutHero } from "@/components/AboutHero";
@@ -18,6 +16,7 @@ import { TechStackGrid } from "@/components/techStack/TechStackGrid";
 import { WorksPreviews } from "@/components/workPreview/WorksPreviews";
 
 import { Send } from "react-feather";
+import { getProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: {
@@ -30,6 +29,8 @@ export const metadata: Metadata = {
 };
 
 export default function page() {
+  const projects = getProjects();
+
   return (
     <>
       <main className="h-full w-full">
