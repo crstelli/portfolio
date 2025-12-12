@@ -1,0 +1,129 @@
+---
+id: 2
+slug: "shoppy-dashboard"
+stack: "Full Stack"
+date:
+  year: 2025
+  month: "October"
+worked_for: "8 days"
+hosted_on: "Netlify"
+name: "Shoppy Dashboard"
+description: "Shoppy Dashboard is a modern admin dashboard for Shoppy Website owners to manage products, orders, and sales metrics efficiently."
+technologies:
+  - label: "React"
+    image: "/techstack-logos/react.svg"
+    content: ""
+  - label: "Vite"
+    image: "/techstack-logos/vite.svg"
+    content: ""
+  - label: "TailwindCSS"
+    image: "/techstack-logos/tailwindcss.svg"
+    content: ""
+  - label: "Supabase"
+    image: "/techstack-logos/supabase.svg"
+    content: ""
+  - label: "Tanstack Query"
+    image: "/techstack-logos/tanstackquery.png"
+    content: ""
+  - label: "React Router"
+    image: "/techstack-logos/reactrouter.svg"
+    content: ""
+  - label: "Netlify"
+    image: "/techstack-logos/netlify.svg"
+    content: ""
+  - label: "React Hook Form"
+    image: "/techstack-logos/reacthookform.svg"
+    content: ""
+  - label: "Date Fns"
+    image: "/techstack-logos/datefns.png"
+    content: ""
+  - label: "Lucide React"
+    image: "/techstack-logos/lucidereact.svg"
+    content: ""
+  - label: "React Hot Toast"
+    image: "/techstack-logos/reacthottoast.png"
+    content: ""
+  - label: "Recharts"
+    image: "/techstack-logos/recharts.png"
+    content: ""
+features:
+  - "Dark Mode"
+  - "Graphs for analytics"
+  - "Filtering and sorting"
+github: "https://github.com/crstelli/shoppy-dashboard"
+live_view: "https://db-shoppy.netlify.app/"
+---
+
+# Overview
+
+Shoppy Dashboard is a fully functional **admin dashboard** designed to manage the backend of the Shoppy e-commerce platform.
+
+Access is restricted to admins, who can log in with an account initially created at login. Admins can create additional accounts for team members. The dashboard provides a comprehensive overview of the platform, including **statistics, analytics, product management, order tracking, user management, and settings**, all in a clean and responsive interface with **dark mode support**.
+
+The project was built with **React**, **Vite**, **TailwindCSS**, **Supabase**, and deployed with a focus on performance, scalability, and maintainable code.
+
+## Technical Decisions
+
+- **React + Vite**: The dashboard is built with React for a modular component-based architecture, while Vite provides a fast and optimized development experience.
+
+- **React Router**: Used to handle multi-page navigation within the dashboard efficiently.
+
+- **React Query**: Ensures smooth data fetching, caching, and synchronization with the Supabase backend.
+
+- **Supabase**: Powers authentication, database management, and real-time updates, providing a seamless backend experience.
+
+- **Styling**: TailwindCSS was chosen for fast UI development, responsive design, and easy customization.
+
+- **Forms and Feedback**: react-hook-form manages forms efficiently, while react-hot-toast provides quick, user-friendly notifications.
+
+- **Charts & Analytics**: Recharts displays dynamic, interactive charts for orders, sales, and other statistics.
+
+- **Utilities**: date-fns is used for date handling, and lucide-react provides scalable and consistent icons throughout the dashboard.
+
+## Challenges
+
+One key challenge was **structuring a full-featured dashboard** with multiple interdependent sections, including products, orders, users, and settings, while keeping navigation intuitive and performant.
+
+Implementing **dynamic filters, pagination, and status updates** across products and orders required careful state management and **real-time syncing** with Supabase. Handling admin permissions, account creation, and secure authentication presented additional complexity.
+
+Designing charts and analytics for multiple time frames (7, 30, 90 days) demanded efficient querying and calculation of aggregated data without overloading the backend. Finally, ensuring a smooth **dark mode toggle** across the entire interface required consistent theming across all components.
+
+## Key Features
+
+1. **Authentication & Admin Management**: Admin login with secure authentication, account creation for new admins, and profile management including username and password updates.
+
+2. **Statistics & Analytics**: Interactive charts and dashboards display key metrics such as total orders, revenue, top categories, and recent activity. Filters allow viewing data over 7, 30, or 90-day periods.
+
+3. **Product Management**: Full CRUD operations for all products, including image, name, price, quantity, description, ID, and status (active, sold out, hidden). Products can be filtered and paginated for efficient management.
+
+4. **Category Management**: Admins can create and manage product categories, enabling better organization of the catalog.
+
+5. **Order Management**: Track all customer orders, update their status (completed, delivery, etc.), and view additional information. Filtering and pagination simplify navigation through large datasets.
+
+6. **User Management**: Admins can create and manage other admin accounts, controlling access to the dashboard.
+
+7. **Settings**: Modify platform-wide settings, including shipping prices, which are automatically applied to user carts.
+
+8. **Dark Mode**: Toggle between light and dark themes for a better user experience.
+
+## Future Improvements
+
+- _Advanced analytics_: Add more detailed visualizations such as conversion rates, user engagement, and product performance trends.
+
+- _Role-based permissions_: Implement granular permission levels for different admin types.
+
+- _Notifications_: Add email or in-app notifications for order updates, low stock, or new admin activity.
+
+- _Bulk operations_: Enable bulk editing or deletion of products and orders to speed up management.
+
+- _Export & reporting_: Provide CSV or PDF export of analytics and order data for offline reporting.
+
+## Lessons & Final Considerations
+
+Developing Shoppy Dashboard enhanced my ability to **structure complex admin interfaces**, focusing on usability, performance, and maintainability.
+
+Working with **React Query and Supabase** deepened my understanding of efficient data fetching, caching, and real-time updates. Handling multiple interdependent components and stateful operations strengthened my **state management and problem-solving skills**.
+
+Designing charts, filters, and pagination taught me to **optimize both UX and backend interactions**, while implementing dark mode reinforced my understanding of consistent theming and responsive styling.
+
+This project also highlighted the importance of **reusable components, form handling, and user feedback mechanisms**, which collectively improve development speed and overall product quality.

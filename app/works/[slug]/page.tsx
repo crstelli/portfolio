@@ -17,7 +17,7 @@ export { generateMetadata } from "./generateMetadata";
 export { generateStaticParams } from "./generateStaticParams";
 export const dynamicParams = false;
 
-import { Content } from "./Content";
+import { Content } from "@/components/cards/Content";
 import { serialize } from "next-mdx-remote/serialize";
 
 export interface ParamsProps {
