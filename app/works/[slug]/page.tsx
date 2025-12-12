@@ -11,6 +11,7 @@ import { WorkInfoCard } from "@/components/cards/WorkInfoCard";
 
 import { Gallery } from "@/components/gallery/Gallery";
 import { ArrowLeft } from "react-feather";
+import { getProjectBySlug } from "@/lib/projects";
 
 export { generateMetadata } from "./generateMetadata";
 export { generateStaticParams } from "./generateStaticParams";
@@ -22,12 +23,13 @@ export interface ParamsProps {
 
 export default async function page({ params }: ParamsProps) {
   const { slug } = await params;
+  const { data, content } = await getProjectBySlug(slug);
 
   const project = projects.find((p) => p.slug === slug);
 
   if (!project) notFound();
   // const { default: Content } = await import(`@/oldProjects/${project.slug}.mdx`);
-  const { default: Content } = await import(`@/projects/shoppy-website/content.mdx`);
+  const { default: Content } = await import(`@/projects/${slug}/content.mdx`);
 
   const projectIndex = projects.indexOf(project);
   const nextProject = projectIndex < projects.length ? projects[projectIndex + 1] : null;
@@ -43,11 +45,14 @@ export default async function page({ params }: ParamsProps) {
           Works
         </Button>
 
-        <Title>{project.name}</Title>
-        <Subtitle>{project.description}</Subtitle>
+        <Title>{data.name}</Title>
+        <Subtitle>{data.description}</Subtitle>
         <Gallery>
-          {project.images.map((img) => (
-            <Gallery.Image key={img} name={project.name} src={img} />
+          <Gallery.Image key={"preview"} name={project.name} src={`/projects/${data.slug}/images/preview.jpg`} />
+
+          {/* Generates an array [1, 2, 3, 4, 5] */}
+          {[...Array(6).keys()].slice(1).map((path) => (
+            <Gallery.Image key={path} name={project.name} src={`/projects/${data.slug}/images/image-${path}.png`} />
           ))}
         </Gallery>
       </Section>
@@ -56,8 +61,8 @@ export default async function page({ params }: ParamsProps) {
         <div className="min-[940px]:max-[1050px]:col-span-2 row-span-3 max-sm:px-4">
           <Content />
         </div>
-        <WorkInfoCard project={project} />
-        <StackInfoCard stack={project.technologies} />
+        <WorkInfoCard data={data} />
+        <StackInfoCard stack={data.technologies} />
 
         {nextProject && <NextProjectCard project={project} />}
       </Section>
