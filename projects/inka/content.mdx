@@ -16,8 +16,11 @@ technologies:
   - label: "React"
     image: "/techstack-logos/react.svg"
     content: ""
-  - label: "Supabase"
-    image: "/techstack-logos/supabase.svg"
+  - label: "PostgreSQL"
+    image: "/techstack-logos/postgresql.svg"
+    content: ""
+  - label: "Prisma"
+    image: "/techstack-logos/prisma.svg"
     content: ""
   - label: "TailwindCSS"
     image: "/techstack-logos/tailwindcss.svg"
@@ -31,103 +34,90 @@ technologies:
   - label: "Shadcn/ui"
     image: "/techstack-logos/shadcn.svg"
     content: ""
+  - label: "Auth.js"
+    image: "/techstack-logos/authjs.png"
+    content: ""
   - label: "Lucide React"
     image: "/techstack-logos/lucidereact.svg"
     content: ""
-  - label: "React Hot Toast"
-    image: "/techstack-logos/reacthottoast.png"
-    content: ""
-  - label: "React Hook Form"
-    image: "/techstack-logos/reacthookform.svg"
-    content: ""
-  - label: "Leaflet"
-    image: "/techstack-logos/leaflet.png"
-    content: ""
-  - label: "React Leaflet"
-    image: "/techstack-logos/reactleaflet.svg"
-    content: ""
-  - label: "Three.js"
-    image: "/techstack-logos/threejs.svg"
+  - label: "Tip Tap"
+    image: "/techstack-logos/tiptap.jpeg"
     content: ""
 features:
   - "Responsive Design"
-  - "Map Integration"
-  - "3D Model"
-github: "https://github.com/crstelli/food-truck"
-live_view: "https://crstelli-foodtruck.vercel.app/"
+  - "Database integration"
+  - "Markdown Editor"
+github: "https://github.com/crstelli/inka"
+live_view: "https://inka-notes.vercel.app"
 next_slug: "shoppy-website"
 ---
 
 # Overview
 
-FoodTruck is a full-featured **map-based application** designed to track fast food trucks around the world. Users can browse truck locations, read reviews, add new trucks, search for trucks, and navigate directly via Google Maps links.
+**Inka** is a fast, lightweight **note-taking application** focused on clarity, performance, and a distraction-free writing experience. It enables users to create, edit, and organize notes through a clean text-editor interface inspired by modern knowledge-management tools.
 
-The app features a landing page with a hero section and CTA, an about page with a modern Z-pattern layout, a dark mode toggle, and an interactive map interface.
+The app features a sleek landing page, a frictionless Google login flow, an autosaving markdown-ready editor powered by TipTap, a responsive UI, and seamless theme switching.
 
-The project was built with **React**, **Next.js**, **TypeScript**, **TailwindCSS**, **Supabase**, and incorporates libraries like **Leaflet**, **React Leaflet**, **Three.js**, **react-hook-form**, **lucide-react**, **react-hot-toast**, and **shadcn/ui**.
+The project was built with **Next.js**, **React**, **TypeScript**, **TailwindCSS**, **PostgreSQL**, and **Prisma**, integrating libraries like **TipTap**, **shadcn/ui**, **lucide-react**, and **Auth.js** for authentication.
 
 ## Technical Decisions
 
-- **React + Next.js**: Provides a modular, component-based architecture with optimized page routing.
+- **Next.js + React**: Ensures a structured, scalable architecture with optimized routing and server-side capabilities.
 
-- **TailwindCSS**: Used for fast, responsive styling and UI consistency.
+- **PostgreSQL + Prisma**: Provides a robust relational database layer with type-safe queries and schema-driven development.
 
-- **Supabase**: Handles backend data storage, user authentication, and reviews.
+- **TailwindCSS**: Enables fast styling and a consistent design language throughout the application.
 
-- **Leaflet & React Leaflet**: Powers the interactive map interface with markers, popups, and layers.
+- **TipTap Editor**: Delivers a powerful, extensible editor for markdown-style writing with full control over events and custom styling.
 
-- **Three.js**: Implements a 3D model of trucks in the info sidebar for a more engaging experience.
+- **Auth.js (Google Provider)**: Implements a secure, fast login experience with OAuth integration.
 
-- **Forms and Feedback**: react-hook-form for forms and react-hot-toast for notifications.
+- **shadcn/ui**: Supplies a modern component base aligned with the overall minimalist design.
 
-- **Icons & UI Components**: lucide-react and shadcn/ui for consistent, modern visuals.
-
-- **Dark/Light Theme Layers**: Separate map layers enhance user experience for theme switching.
+- **Vercel Deployment**: Ensures high performance, zero-config deployment, and automatic optimizations.
 
 ## Challenges
 
-One key challenge was **structuring a full-featured map-based application** with multiple interactive components, including markers, popups, a sidebar, bookmarks, search, and forms, while keeping navigation intuitive and performant.
+One major challenge was **integrating the TipTap editor** while maintaining a clean UX. Handling all editor events, managing custom styling, and syncing real-time changes required precise control over state and extensions.
 
-Implementing **dynamic interactions with markers and popups** required careful state management and manual handling of events, as well as syncing sidebar content with the map. Ensuring smooth user experience across different components presented additional complexity.
+Implementing a **debounced saving system** was another key challenge. To prevent excessive database operations, edits are saved only after user inactivity. This system reduced write operations by **approximately 90%**, significantly improving performance and resource usage.
 
-**Working with Leaflet was particularly challenging**, as it is not integrated with TailwindCSS. I had to manually customize styles by selecting classes, handle popup events entirely by hand, and implement **two separate map layers for dark and light mode** to reinforce the UX across themes. This required precise attention to detail and strengthened my ability to solve complex frontend integration problems.
+Creating a seamless **autosave flow** required careful tuning of timers, React state, and Prisma write logic to avoid conflicts or stale data.
 
-Designing interactive features like bookmarks, search, and adding new trucks taught me to **optimize UX while managing multiple layers of state and events**, making this project a very rewarding challenge.
+Managing authentication with Google, integrating PostgreSQL through Prisma, and building a refined dark/light theme with shadcn/ui pushed the project to a higher level of polish and technical depth.
 
 ## Key Features
 
-1. **Landing Page & Hero Section**: Includes illustrations, CTA, and introduction to the app.
+1. **Landing Page**: Minimalist introduction to the app and its core value: fast, focused note-taking.
 
-2. **About Page**: Explains the app with Z-pattern hero sections, images, and text.
+2. **Google Authentication**: Secure login flow powered by Auth.js and the Google provider.
 
-3. **Dark Mode Toggle**: Switch between light and dark themes seamlessly.
+3. **Autosaving Editor**: Notes are saved automatically after the user stops typing.
 
-4. **Interactive Map**: Featuring markers for trucks, popups with truck info, and navigation links to Google Maps.
+4. **Debounced Write System**: Reduces database calls by ~90% through intelligent batching of edits.
 
-5. **Sidebar Functionality**: Searchbar for finding trucks, bookmarks for saving favorites, and dynamic forms for adding new trucks.
+5. **TipTap Markdown Editor**: Clean writing environment with rich editing capabilities.
 
-6. **Truck Information Panel**: Displays truck details, affordability, rating, creation date, reviews, bookmarks, and 3D interactive model with Three.js.
+6. **Responsive Design**: Fluid layout optimized for all screen sizes.
 
-7. **Form & Search Integration**: Users can add new trucks with name and affordability level, and search existing trucks with filters.
+7. **Modern UI Components**: Built with shadcn/ui and enhanced with lucide-react icons.
 
-8. **Settings Page**: Customize app theme (light, dark, or system).
+8. **Database Integration**: PostgreSQL + Prisma handles all note storage and querying.
+
+9. **Dark/Light Theme Support**: Managed with shadcn's theme provider for consistent UX.
 
 ## Future Improvements
 
-- _Dynamic user location_: Center the map based on the user’s real-time position.
+- _Login_: Add traditional **email/password login** and more authentication providers.
 
-- _Add reviews_: Allow users to submit reviews for trucks.
+- _Sharing notes_: Allow users to **share notes** with others.
 
-- _Enhanced filtering_: Add filters by affordability, rating, or category.
+- _Nested notes_: Support **nested notes** for hierarchical structures.
 
-- _Push notifications_: Alert users about new trucks or updates in nearby areas.
-
-- _Analytics & statistics_: Show popular trucks, top-rated locations, or trends over time.
+- _Folder organization_: Introduce **folder organization** for advanced sorting and grouping.
 
 ## Lessons & Final Considerations
 
-Building FoodTruck strengthened my ability to **develop interactive map-based applications** with complex UI interactions. Working with **Leaflet and React Leaflet** taught me how to handle events manually and integrate maps with modern frontend frameworks.
+Building Inka strengthened my ability to work with **third-party libraries**, navigate documentation effectively, and integrate complex tools like TipTap into real applications. Managing authentication flows, building a relational database schema with PostgreSQL and Prisma, and optimizing performance through **debouncing** and **autosave strategies** expanded my backend and frontend competencies.
 
-Implementing separate dark/light layers reinforced the importance of **theme-aware UX design**, while creating dynamic popups, sidebar content, and search/bookmark functionality enhanced my **state management and event handling skills**.
-
-Integrating a 3D model with Three.js added an extra layer of interactivity, demonstrating how creative UI elements can enrich the user experience. This project provided hands-on experience in **front-end architecture, complex state**
+This project enhanced my understanding of **full-stack architecture**, efficient data management, and the challenges of creating a polished, responsive, and extensible note-taking experience.
