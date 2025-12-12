@@ -1,13 +1,13 @@
 import { links } from "@/data/links";
-import { projects } from "@/data/projects";
+import { getProjectBySlug } from "@/lib/projects";
 
 import type { ParamsProps } from "./page";
 
 export async function generateMetadata({ params }: ParamsProps) {
   const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
+  const { data } = await getProjectBySlug(slug);
 
-  if (!project) {
+  if (!data) {
     return {
       title: "Project not found",
       description: "This project does not exist.",
@@ -15,13 +15,20 @@ export async function generateMetadata({ params }: ParamsProps) {
   }
 
   return {
-    title: `${project.name}`,
-    description: project.description,
+    title: `${data.name}`,
+    description: data.description,
     metadataBase: new URL(links.portfolio),
     openGraph: {
-      title: project.name,
-      description: project.description,
-      images: [...project.images],
+      title: data.name,
+      description: data.description,
+      images: [
+        `/projects/${data.slug}/images/preview.jpg`,
+        `/projects/${data.slug}/images/image-1.png`,
+        `/projects/${data.slug}/images/image-2.png`,
+        `/projects/${data.slug}/images/image-3.png`,
+        `/projects/${data.slug}/images/image-4.png`,
+        `/projects/${data.slug}/images/image-5.png`,
+      ],
     },
   };
 }
