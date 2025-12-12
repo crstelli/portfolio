@@ -1,6 +1,3 @@
-import { projects } from "@/data/projects";
-import { notFound } from "next/navigation";
-
 import { Button } from "@/components/Button";
 import { NextProjectCard } from "@/components/cards/NextProjectCard";
 import { Section } from "@/components/section/Section";
@@ -29,15 +26,6 @@ export default async function page({ params }: ParamsProps) {
   const { data, content } = await getProjectBySlug(slug);
   const mdxSource = await serialize(content);
 
-  const project = projects.find((p) => p.slug === slug);
-
-  if (!project) notFound();
-  // const { default: Content } = await import(`@/oldProjects/${project.slug}.mdx`);
-  // const { default: Content } = await import(`@/projects/${slug}/content.mdx`);
-
-  const projectIndex = projects.indexOf(project);
-  const nextProject = projectIndex < projects.length ? projects[projectIndex + 1] : null;
-
   return (
     <main className="min-h-screen">
       <Section className="relative">
@@ -52,11 +40,11 @@ export default async function page({ params }: ParamsProps) {
         <Title>{data.name}</Title>
         <Subtitle>{data.description}</Subtitle>
         <Gallery>
-          <Gallery.Image key={"preview"} name={project.name} src={`/projects/${data.slug}/images/preview.jpg`} />
+          <Gallery.Image key={"preview"} name={data.name} src={`/projects/${data.slug}/images/preview.jpg`} />
 
           {/* Generates an array [1, 2, 3, 4, 5] */}
           {[...Array(6).keys()].slice(1).map((path) => (
-            <Gallery.Image key={path} name={project.name} src={`/projects/${data.slug}/images/image-${path}.png`} />
+            <Gallery.Image key={path} name={data.name} src={`/projects/${data.slug}/images/image-${path}.png`} />
           ))}
         </Gallery>
       </Section>
@@ -68,7 +56,7 @@ export default async function page({ params }: ParamsProps) {
         <WorkInfoCard data={data} />
         <StackInfoCard stack={data.technologies} />
 
-        {nextProject && <NextProjectCard project={project} />}
+        <NextProjectCard slug={data.next_slug} />
       </Section>
     </main>
   );

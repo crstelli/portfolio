@@ -1,12 +1,11 @@
-// import { projects } from "@/data/projects";
 import type { Metadata } from "next";
+import { getProjects } from "@/lib/projects";
 
 import { Section } from "@/components/section/Section";
 import { Subtitle } from "@/components/section/Subtitle";
 import { Title } from "@/components/section/Title";
 
 import { WorkCard } from "@/components/cards/work/WorkCard";
-import { getProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "Works",

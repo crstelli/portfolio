@@ -18,6 +18,8 @@ export interface ProjectType {
 
   github: string;
   live_view: string;
+
+  next_slug: string;
 }
 
 type technology = {
