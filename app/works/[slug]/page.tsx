@@ -26,7 +26,8 @@ export default async function page({ params }: ParamsProps) {
   const project = projects.find((p) => p.slug === slug);
 
   if (!project) notFound();
-  const { default: Content } = await import(`@/oldProjects/${project.slug}.mdx`);
+  // const { default: Content } = await import(`@/oldProjects/${project.slug}.mdx`);
+  const { default: Content } = await import(`@/projects/shoppy-website/content.mdx`);
 
   const projectIndex = projects.indexOf(project);
   const nextProject = projectIndex < projects.length ? projects[projectIndex + 1] : null;
