@@ -17,6 +17,9 @@ export { generateMetadata } from "./generateMetadata";
 export { generateStaticParams } from "./generateStaticParams";
 export const dynamicParams = false;
 
+import { Content } from "./Content";
+import { serialize } from "next-mdx-remote/serialize";
+
 export interface ParamsProps {
   params: Promise<{ slug: string }>;
 }
@@ -24,12 +27,13 @@ export interface ParamsProps {
 export default async function page({ params }: ParamsProps) {
   const { slug } = await params;
   const { data, content } = await getProjectBySlug(slug);
+  const mdxSource = await serialize(content);
 
   const project = projects.find((p) => p.slug === slug);
 
   if (!project) notFound();
   // const { default: Content } = await import(`@/oldProjects/${project.slug}.mdx`);
-  const { default: Content } = await import(`@/projects/${slug}/content.mdx`);
+  // const { default: Content } = await import(`@/projects/${slug}/content.mdx`);
 
   const projectIndex = projects.indexOf(project);
   const nextProject = projectIndex < projects.length ? projects[projectIndex + 1] : null;
@@ -59,7 +63,7 @@ export default async function page({ params }: ParamsProps) {
 
       <Section className="grid pt-0! grid-cols-1 min-[940px]:grid-cols-2 min-[1050px]:grid-cols-[5fr_4fr] min-[1150px]:grid-cols-[3fr_2fr] grid-rows-[auto_auto_1fr] gap-8">
         <div className="min-[940px]:max-[1050px]:col-span-2 row-span-3 max-sm:px-4">
-          <Content />
+          <Content source={mdxSource} />
         </div>
         <WorkInfoCard data={data} />
         <StackInfoCard stack={data.technologies} />
